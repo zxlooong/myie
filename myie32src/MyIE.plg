@@ -1,0 +1,266 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MyIE - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /nologo /D "NDEBUG" /tlb "Release/MyIE.tlb" /h "MyIE_i.h" /iid "MyIE_i.c" /Oicf /win32 "E:\y2001\Myie3.2-476\MyIE.idl""
+Creating command line "rc.exe /l 0x409 /fo"Release/MyIE.res" /d "NDEBUG" /d "_AFXDLL" "E:\y2001\Myie3.2-476\MyIE.rc"" 
+Creating temporary file "C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP144.tmp" with contents
+[
+/nologo /MD /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/MyIE.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\y2001\Myie3.2-476\AddressBarEx.cpp"
+"E:\y2001\Myie3.2-476\AddToThisFavDlg.cpp"
+"E:\y2001\Myie3.2-476\AdvTabCtrl.cpp"
+"E:\y2001\Myie3.2-476\AnimateIcon.cpp"
+"E:\y2001\Myie3.2-476\BaseExpObj.cpp"
+"E:\y2001\Myie3.2-476\ChevBar.cpp"
+"E:\y2001\Myie3.2-476\ChildFrm.cpp"
+"E:\y2001\Myie3.2-476\CollectorDlg.cpp"
+"E:\y2001\Myie3.2-476\Crypt.cpp"
+"E:\y2001\Myie3.2-476\CustomizeToolbar.cpp"
+"E:\y2001\Myie3.2-476\custsite.cpp"
+"E:\y2001\Myie3.2-476\ExternalUtilItem.cpp"
+"E:\y2001\Myie3.2-476\ExternalUtils.cpp"
+"E:\y2001\Myie3.2-476\FavTree.cpp"
+"E:\y2001\Myie3.2-476\FavTreeCtrl.cpp"
+"E:\y2001\Myie3.2-476\FavWnd.cpp"
+"E:\y2001\Myie3.2-476\FileName.cpp"
+"E:\y2001\Myie3.2-476\FixedHtmlView.cpp"
+"E:\y2001\Myie3.2-476\GroupUrlDlg.cpp"
+"E:\y2001\Myie3.2-476\HistoryTree.cpp"
+"E:\y2001\Myie3.2-476\HisTreeCtrl.cpp"
+"E:\y2001\Myie3.2-476\HtmlWnd.cpp"
+"E:\y2001\Myie3.2-476\idispimp.cpp"
+"E:\y2001\Myie3.2-476\InputAlias.cpp"
+"E:\y2001\Myie3.2-476\InputPassword.cpp"
+"E:\y2001\Myie3.2-476\LinkListDlg.cpp"
+"E:\y2001\Myie3.2-476\MainFrm.cpp"
+"E:\y2001\Myie3.2-476\MenuBar.cpp"
+"E:\y2001\Myie3.2-476\MenuData.cpp"
+"E:\y2001\Myie3.2-476\Menuorder.cpp"
+"E:\y2001\Myie3.2-476\MyIE.cpp"
+"E:\y2001\Myie3.2-476\MyIEHelper.cpp"
+"E:\y2001\Myie3.2-476\MyIENSHandle.cpp"
+"E:\y2001\Myie3.2-476\MyIEOptions.cpp"
+"E:\y2001\Myie3.2-476\MyIEView.cpp"
+"E:\y2001\Myie3.2-476\OrgGroupDlg.cpp"
+"E:\y2001\Myie3.2-476\perfmon.cpp"
+"E:\y2001\Myie3.2-476\PopupDlg.cpp"
+"E:\y2001\Myie3.2-476\ProxyInfo.cpp"
+"E:\y2001\Myie3.2-476\ProxyList.cpp"
+"E:\y2001\Myie3.2-476\QuickSearchDlg.cpp"
+"E:\y2001\Myie3.2-476\rasspdm.cpp"
+"E:\y2001\Myie3.2-476\Resourcebar.cpp"
+"E:\y2001\Myie3.2-476\scbarcf.cpp"
+"E:\y2001\Myie3.2-476\scbarg.cpp"
+"E:\y2001\Myie3.2-476\searchbar.cpp"
+"E:\y2001\Myie3.2-476\SelProxyCatDlg.cpp"
+"E:\y2001\Myie3.2-476\SetAliasDlg.cpp"
+"E:\y2001\Myie3.2-476\SetProxy.cpp"
+"E:\y2001\Myie3.2-476\SetRefIntervalDlg.cpp"
+"E:\y2001\Myie3.2-476\SetSCDlg.cpp"
+"E:\y2001\Myie3.2-476\ShellPidl.cpp"
+"E:\y2001\Myie3.2-476\ShellTree.cpp"
+"E:\y2001\Myie3.2-476\ShellTreeCtrl.cpp"
+"E:\y2001\Myie3.2-476\ShellWnd.cpp"
+"E:\y2001\Myie3.2-476\SimpleSAH.cpp"
+"E:\y2001\Myie3.2-476\sizecbar.cpp"
+"E:\y2001\Myie3.2-476\StatusBarWithProgress.Cpp"
+"E:\y2001\Myie3.2-476\StickName.cpp"
+"E:\y2001\Myie3.2-476\TabDropTarget.cpp"
+"E:\y2001\Myie3.2-476\TextProgressCtrl.cpp"
+"E:\y2001\Myie3.2-476\ToolMenu.cpp"
+"E:\y2001\Myie3.2-476\UrlFilterProp.cpp"
+"E:\y2001\Myie3.2-476\webbrowser2.cpp"
+"E:\y2001\Myie3.2-476\WebFileOpenDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP144.tmp" 
+Creating temporary file "C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP145.tmp" with contents
+[
+/nologo /MD /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Release/MyIE.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\y2001\Myie3.2-476\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP145.tmp" 
+Creating temporary file "C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP146.tmp" with contents
+[
+Wsock32.lib wininet.lib pdh.lib Delayimp.lib /nologo /subsystem:windows /pdb:none /machine:I386 /out:"Release/MyIE.exe" /DELAYLOAD:pdh.dll 
+".\Release\AddressBarEx.obj"
+".\Release\AddToThisFavDlg.obj"
+".\Release\AdvTabCtrl.obj"
+".\Release\AnimateIcon.obj"
+".\Release\BaseExpObj.obj"
+".\Release\ChevBar.obj"
+".\Release\ChildFrm.obj"
+".\Release\CollectorDlg.obj"
+".\Release\Crypt.obj"
+".\Release\CustomizeToolbar.obj"
+".\Release\custsite.obj"
+".\Release\ExternalUtilItem.obj"
+".\Release\ExternalUtils.obj"
+".\Release\FavTree.obj"
+".\Release\FavTreeCtrl.obj"
+".\Release\FavWnd.obj"
+".\Release\FileName.obj"
+".\Release\FixedHtmlView.obj"
+".\Release\GroupUrlDlg.obj"
+".\Release\HistoryTree.obj"
+".\Release\HisTreeCtrl.obj"
+".\Release\HtmlWnd.obj"
+".\Release\idispimp.obj"
+".\Release\InputAlias.obj"
+".\Release\InputPassword.obj"
+".\Release\LinkListDlg.obj"
+".\Release\MainFrm.obj"
+".\Release\MenuBar.obj"
+".\Release\MenuData.obj"
+".\Release\Menuorder.obj"
+".\Release\MyIE.obj"
+".\Release\MyIEHelper.obj"
+".\Release\MyIENSHandle.obj"
+".\Release\MyIEOptions.obj"
+".\Release\MyIEView.obj"
+".\Release\OrgGroupDlg.obj"
+".\Release\perfmon.obj"
+".\Release\PopupDlg.obj"
+".\Release\ProxyInfo.obj"
+".\Release\ProxyList.obj"
+".\Release\QuickSearchDlg.obj"
+".\Release\rasspdm.obj"
+".\Release\Resourcebar.obj"
+".\Release\scbarcf.obj"
+".\Release\scbarg.obj"
+".\Release\searchbar.obj"
+".\Release\SelProxyCatDlg.obj"
+".\Release\SetAliasDlg.obj"
+".\Release\SetProxy.obj"
+".\Release\SetRefIntervalDlg.obj"
+".\Release\SetSCDlg.obj"
+".\Release\ShellPidl.obj"
+".\Release\ShellTree.obj"
+".\Release\ShellTreeCtrl.obj"
+".\Release\ShellWnd.obj"
+".\Release\SimpleSAH.obj"
+".\Release\sizecbar.obj"
+".\Release\StatusBarWithProgress.obj"
+".\Release\StdAfx.obj"
+".\Release\StickName.obj"
+".\Release\TabDropTarget.obj"
+".\Release\TextProgressCtrl.obj"
+".\Release\ToolMenu.obj"
+".\Release\UrlFilterProp.obj"
+".\Release\webbrowser2.obj"
+".\Release\WebFileOpenDlg.obj"
+".\Release\MyIE.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\changshu\LOCALS~1\Temp\RSP146.tmp"
+<h3>Output Window</h3>
+Creating Type Library...
+Processing E:\y2001\Myie3.2-476\MyIE.idl
+MyIE.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\ocidl.idl
+ocidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oleidl.idl
+oleidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\servprov.idl
+servprov.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\urlmon.idl
+urlmon.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\msxml.idl
+msxml.idl
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AddressBarEx.cpp
+AddToThisFavDlg.cpp
+AdvTabCtrl.cpp
+AnimateIcon.cpp
+BaseExpObj.cpp
+ChevBar.cpp
+ChildFrm.cpp
+CollectorDlg.cpp
+Crypt.cpp
+CustomizeToolbar.cpp
+custsite.cpp
+ExternalUtilItem.cpp
+ExternalUtils.cpp
+FavTree.cpp
+FavTreeCtrl.cpp
+FavWnd.cpp
+FileName.cpp
+FixedHtmlView.cpp
+GroupUrlDlg.cpp
+HistoryTree.cpp
+Generating Code...
+Compiling...
+HisTreeCtrl.cpp
+HtmlWnd.cpp
+idispimp.cpp
+InputAlias.cpp
+InputPassword.cpp
+LinkListDlg.cpp
+MainFrm.cpp
+MenuBar.cpp
+MenuData.cpp
+Menuorder.cpp
+MyIE.cpp
+MyIEHelper.cpp
+MyIENSHandle.cpp
+MyIEOptions.cpp
+MyIEView.cpp
+OrgGroupDlg.cpp
+perfmon.cpp
+PopupDlg.cpp
+ProxyInfo.cpp
+ProxyList.cpp
+Generating Code...
+Compiling...
+QuickSearchDlg.cpp
+rasspdm.cpp
+Resourcebar.cpp
+scbarcf.cpp
+scbarg.cpp
+searchbar.cpp
+SelProxyCatDlg.cpp
+SetAliasDlg.cpp
+SetProxy.cpp
+SetRefIntervalDlg.cpp
+SetSCDlg.cpp
+ShellPidl.cpp
+ShellTree.cpp
+ShellTreeCtrl.cpp
+ShellWnd.cpp
+SimpleSAH.cpp
+sizecbar.cpp
+StatusBarWithProgress.Cpp
+StickName.cpp
+TabDropTarget.cpp
+Generating Code...
+Compiling...
+TextProgressCtrl.cpp
+ToolMenu.cpp
+UrlFilterProp.cpp
+webbrowser2.cpp
+WebFileOpenDlg.cpp
+Generating Code...
+Linking...
+   Creating library Release/MyIE.lib and object Release/MyIE.exp
+
+
+
+<h3>Results</h3>
+MyIE.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

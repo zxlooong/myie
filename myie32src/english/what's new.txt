@@ -1,0 +1,89 @@
+3.2
+1. Add a standard tab style, not like current flat button tab. You can deselect the flat button option in MyIE's tab options.
+
+2. Add two new mouse gestures:
+	Up Right: 	Switch to next window
+	Up Left:	Switch to previous window
+
+3. Can customize the new window operation for Mouse Down gesture. 
+
+4. Lock toolbars.
+
+5. Add a lock window option in double-click tab, and so on.
+
+6. For IE5.5 and above the back and forward list will be more accurate.
+ 
+7. Restore Modem downloading speed under Win2000, and add a menu item to switch whether display or not.
+
+8. Add remove typed URLs function in myie options.
+
+9. Hide the hidden items in favorites according to system's setting.
+
+10. Fix bugs about saving proxies list.
+
+11. Separated toolbar icons from main program, so that user can modify and customize easily.
+
+12. Add more toolbar buttons.
+
+3.1
+1. Separate Translation function from Web proxy. Now you can select translating from menu directly.
+
+2. Content Filter. It can filter out advertisement images from web pages to speed up the downloading. You can select Enable content filter in Tools Menu and set the URLs to be filtered in Edit Filters. 
+
+3. Control scrolling speed by mouse. You can select use mouse to control scrolling speed in auto scrolling menu. Then put the mouse on scrollbar, the speed will be decided by the position of mouse. When mouse leaves scrollbar the scrolling will stop.
+
+4. Replace some toolbar icons. 
+
+5. Add Ctrl plus Right click on tab. You can select the corresponding function in MyIE options.
+
+6. Undo list use page title instead of page URL.
+
+7. Can customize window buttons at top right corner. 
+
+8. Add a new startup mode of myie: Doesn't open any window. This will speed up myie startup. 
+
+9. Change some accelerator, such as Auto Save changes to Ctrl+Alt+S.
+
+10. Drop file on Myie now will be opened in current window. 
+
+11. Add Auto save, assign shortcut, assign alias function to tab rightclick menu.
+
+12. Fix some problem reported by user in 3.01.
+
+
+3.0
+1. Auto Save: it like save functions, but page will be save to default directory automatically without save as dialog box. Auto save has four options: save whole page as html, as whole page as mht, only save html, quick save. You can select default Auto Save function in MyIE options. You also can select to categorize pages by site, then pages will be saved to subdirectory named by site name. 
+
+2. Double Click and Middle Click tab: you can select the fucntion for double click and middle click in MyIE option. Currently you can select close window, save as, save html, and auto save.
+
+3. New Icon and Animation Icon.
+
+4. Drag tab: you can use lefe mouse button to drag the tabs to arrange the tab sequence.
+
+5. MyIE Options: I build a new MyIE options dialog box, it supply more options for you to configure.
+
+6. Mouse Gestures: You can press and hold right mouse button in page's blank and move it to perfrom some functions.
+	Down: 				Open New Window
+	Left: 				Back
+	Right: 				Forward
+	Up then Down: 			Refresh
+	Right-Left-Right or Down-Right:	Close window
+
+7. Auto set background color: after download complete it will set the background color of this page as default color.
+
+8. Add Link Here: In Favoriate Menu I add a new item: Add link here. You can add current window's addrress to that favoriate folder directly.
+
+9. Save pictures: you can drag pictures in page to Collector or buttons on status bar to save those pictures to default image folder. The default image folder can be set in MyIE option's Save tab.
+
+10. Move Group menu to Shortcut menu, and add a new Group button on toolbar.
+
+11. Save as group: save all opened windows' URL as a new group. 
+
+12. Lock homepage: it can prevent some web pages to change your homepage, you only can change homepage through MyIe's Internet Option.
+
+13. Display progress percent on progress bar.
+
+14. Change Shortcut Key for Hidden to Alt-` to avoid conflicts with some programs.
+
+
+

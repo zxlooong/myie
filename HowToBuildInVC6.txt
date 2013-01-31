@@ -1,0 +1,18 @@
+=============
+For your information:
+
+
+I build myie32src with 
+
+	1) Windows2000Professional + sp2
+
+	2) VC6.0 + sp5 + new "tlogstg.h" + new "exdisp.h".
+	  Copy "tlogstg.h" and "exdisp.h" to your VC include directory, 
+	  like "C:\Program Files\Microsoft Visual Studio\VC98\Include".
+	  Please backup and then overwrite any old file.
+
+
+=============
+http://LovelyTree.126.com/
+::I love tree
+

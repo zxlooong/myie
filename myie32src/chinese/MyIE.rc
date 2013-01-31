@@ -1,0 +1,2055 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        POPUP "新建(&N)\tCtrl+N"
+        BEGIN
+            MENUITEM "空白",                        ID_FILE_NEW_BLANK
+            MENUITEM "主页\tCtrl+Shift+H",          ID_FILE_NEW_S
+            MENUITEM "当前页",                      ID_FILE_NEW_CURRENTPAGE
+            MENUITEM "从剪贴板\tCtrl+Shift+N",      ID_FILE_NEW_CLIP
+        END
+        MENUITEM "新开MyIE",                    ID_FILE_NEWMYIE
+        MENUITEM "打开(&O)...\tCtrl+O",         ID_FILE_OPENF
+        MENUITEM SEPARATOR
+        MENUITEM "另存为(&S)...\tCtrl+S",       ID_FILE_SAVEAS
+        MENUITEM "保存HTML...\tAlt +S",         ID_FILE_SAVEHTML
+        MENUITEM "快速保存...\tCtrl+E",         ID_FILE_QUICKSAVE
+        MENUITEM "自动保存\tCtrl+Alt+S",        ID_FILE_AUTOSAVE
+        MENUITEM SEPARATOR
+        MENUITEM "打印(&P)...\tCtrl+P",         ID_FILE_PRINT
+        MENUITEM "页面设置(&R)...",             ID_FILE_PRINT_SETUP
+        MENUITEM "打印预览...",                 ID_FILE_PRINTPREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "关闭窗口(&C)\tCtrl+W",        ID_FILE_CLOSE_1
+        MENUITEM "全部关闭(&A)\tCtrl+Shift+W",  ID_FILE_CLOSEALL
+        MENUITEM "全部关闭 - 保留当前页(&K)",   ID_FILE_CLOSE_KEEPCUR
+        MENUITEM "停止打开窗口",                ID_FILE_STOP_OPENALL
+        MENUITEM SEPARATOR
+        MENUITEM "属性...",                     ID_FILE_PROPERTY
+        POPUP "发送(&E)"
+        BEGIN
+            MENUITEM "电子邮件页面...",             ID_FILE_SENDPAGEBYEMAIL
+            MENUITEM "电子邮件链接...",             ID_FILE_SENDLINKBYEMAIL
+        END
+        MENUITEM "脱机工作(&W)",                ID_FILE_WORKOFFLINE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_APP_EXIT
+        MENUITEM "隐藏(&Y)\tAlt +`",            ID_FILE_HIDE
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        POPUP "撤消关闭窗口"
+        BEGIN
+            MENUITEM "撤销最近关闭窗口(&U)\tAlt+Z", ID_EDIT_UNDOCLOSE
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",            ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "全选...\tCtrl+A",             ID_EDIT_SELECT_ALL
+        MENUITEM "查找(在当前页)(&F)...\tCtrl+F", ID_EDIT_FIND
+        MENUITEM "编辑(&D)",                    ID_EDIT_EDIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        POPUP "工具栏(&T)"
+        BEGIN
+            MENUITEM "标准工具栏(&S)",              ID_VIEW_TOOLBAR
+            MENUITEM "地址栏(&A)",                  ID_VIEW_ADDRESSBAR
+            MENUITEM "标签栏(&K)",                  ID_VIEW_TASKBAR
+            MENUITEM "链接栏(&L)",                  ID_VIEW_LINKS
+            MENUITEM "收藏条栏(&F)",                ID_VIEW_FAVS
+            MENUITEM "外部工具条(&E)",              ID_VIEW_EX_TOOL
+            MENUITEM SEPARATOR
+            MENUITEM "锁定工具栏(&O)",              ID_VIEW_LOCKTOOLBAR
+            MENUITEM "文本标签(&T)",                ID_VIEW_TOOLBARTEXTLABEL
+            MENUITEM "自定义工具栏(&C)...",         ID_VIEW_TOOLBARS_CUSTOMIZE
+
+            MENUITEM SEPARATOR
+            POPUP "自定义窗口按钮栏"
+            BEGIN
+                MENUITEM "上一窗口",                    ID_VIEW_WIN_PRE
+                MENUITEM "下一窗口",                    ID_VIEW_WIN_NEXT
+                MENUITEM "全部关闭",                    ID_VIEW_WIN_CLOSEALL
+                MENUITEM "最小化",                      ID_VIEW_WIN_MIN
+                MENUITEM "还原",                        ID_VIEW_WIN_RESTORE
+                MENUITEM "关闭窗口",                    ID_VIEW_WIN_CLOSE
+            END
+        END
+        MENUITEM "菜单栏\tCtrl+F11",            ID_VIEW_MENUBAR
+        MENUITEM "状态栏(&S)",                  ID_VIEW_STATUS_BAR
+        POPUP "浏览栏"
+        BEGIN
+            MENUITEM "历史(&H)",                    ID_VIEW_HIS
+            MENUITEM "搜索(&S)",                    ID_VIEW_EXPLOREBAR_SEARCH
+
+            MENUITEM "收藏夹(&F)",                  ID_FAVORITES_DROPDOWN
+            MENUITEM "文件(&O)",                    ID_VIEW_FOLDER
+            MENUITEM "用户资源(&R)",                ID_VIEW_EXPLOREBAR_RESOURCE
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "文字大小"
+        BEGIN
+            MENUITEM "最大(&G)",                    ID_VIEW_FONTS_LARGEST
+            MENUITEM "较大(&L)",                    ID_VIEW_FONTS_LARGE
+            MENUITEM "中等(&M)",                    ID_VIEW_FONTS_MEDIUM
+            MENUITEM "较小(&S)",                    ID_VIEW_FONTS_SMALL
+            MENUITEM "最小(&A)",                    ID_VIEW_FONTS_SMALLEST
+        END
+        POPUP "编码(&D)"
+        BEGIN
+            MENUITEM "自动选择",                    ID_VIEW_ENCODING_AUTO
+            MENUITEM SEPARATOR
+            MENUITEM "西欧字符",                    ID_VIEW_ENCODING_WESTERNEUROPEAN
+
+            MENUITEM SEPARATOR
+            MENUITEM "简体中文",                    ID_VIEW_ENCODING_CHINESESIMPLIFIED
+
+            MENUITEM "繁体中文",                    ID_VIEW_ENCODING_CHINESETRADITIONAL
+
+            MENUITEM SEPARATOR
+            MENUITEM "日文(Auto Select)",           ID_VIEW_ENCODING_JANESEAUTO
+
+            MENUITEM "日文(Shift-JIS)",             ID_VIEW_ENCODING_JANESE
+            MENUITEM "日文(EUC)",                   ID_VIEW_ENCODING_JANESEEUC
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "转到(&G)"
+        BEGIN
+            MENUITEM "后退(&B)\tAlt+Left Arrow",    ID_GO_BACK
+            MENUITEM "前进(&F)\tAlt+Right Arrow",   ID_GO_FORWARD
+            MENUITEM SEPARATOR
+            MENUITEM "主页(&H)",                    ID_GO_START_PAGE
+        END
+        MENUITEM "停止(&P)\tEsc",               ID_VIEW_STOP
+        MENUITEM "刷新(&R)\tF5",                ID_VIEW_REFRESH
+        MENUITEM "锁定(&L)\tAlt+X",             ID_VIEW_LOCK
+        MENUITEM SEPARATOR
+        MENUITEM "全部停止",                    ID_VIEW_STOP_ALL
+        MENUITEM "全部刷新",                    ID_VIEW_REFRESHALL
+        MENUITEM SEPARATOR
+        MENUITEM "源文件(&O)",                  ID_VIEW_SOURCE
+        MENUITEM "页面全部链接...\tAlt+L",      ID_ALL_PAGE_LINKS
+        MENUITEM "全屏(&F)\tF11",               ID_VIEW_FULLSCREEN
+    END
+    POPUP "收藏(&A)"
+    BEGIN
+        MENUITEM "添加到收藏夹...\tCtrl+D",     ID_FAVORITES_ADDTOFAVORITES
+        MENUITEM "组织收藏夹...",               ID_FAVORITES_ORGNIZEFAVORITES
+
+        POPUP "导入/导出"
+        BEGIN
+            MENUITEM "导入收藏夹...",               ID_FAVORITES_IMPORTFAVORITES
+
+            MENUITEM "导出收藏夹...",               ID_FAVORITES_EXPORTFAVORITES
+
+        END
+        MENUITEM SEPARATOR
+    END
+    POPUP "快捷(&C)"
+    BEGIN
+        POPUP "快捷组(&G)"
+        BEGIN
+            MENUITEM "整理快捷组(&O)...",           ID_ORGGROUP
+            MENUITEM "将当前所有窗口存为组...",     ID_SAVEAS_GROUP
+            POPUP "加入快捷组(&A)"
+            BEGIN
+                MENUITEM SEPARATOR
+            END
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "打开启动组(&S)",              ID_TOOLS_OPENSTART
+        MENUITEM "设置启动组(&E)...",           ID_FAVORITES_DROPDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "打开所有链接(&O)",            ID_TOOLS_OPENALLLINKS
+        MENUITEM "打开最爱的链接(&F)",          ID_SHORTCUT_MFL
+        MENUITEM SEPARATOR
+        MENUITEM "使用网页缩写",                ID_SHORTCUT_ALIAS
+        MENUITEM "设置网页缩写...",             ID_SHORTCUT_MANALIAS
+        MENUITEM SEPARATOR
+        MENUITEM "使用网页一键通",              ID_SHORTCUT_USE_SC
+        MENUITEM "设置网页一键通...",           ID_SHORTCUT_SC
+        MENUITEM SEPARATOR
+        MENUITEM "使用3721中文网址",            ID_SHORTCUTS_USE3721
+        MENUITEM SEPARATOR
+        MENUITEM "设置快捷搜索...",             ID_TOOLS_QUICKSEARCH
+        POPUP "自动填表"
+        BEGIN
+            MENUITEM "填写当前表单\tAlt+Q",         ID_SC_FILLFORM
+            MENUITEM SEPARATOR
+            MENUITEM "保存当前表单\tAlt+1",         ID_SC_SAVEFORM
+            MENUITEM "保存为通用表单\tAlt+2",       ID_SC_SAVEGENFORM
+        END
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        POPUP "当前窗口下载控制"
+        BEGIN
+            MENUITEM "下载图片(当前窗口)",          ID_OPTIONS_LOADIMAGE
+            MENUITEM "下载视频(当前窗口)",          ID_OPTIONS_LOADVIDEOS
+            MENUITEM "下载声音(当前窗口)",          ID_OPTIONS_LOADSOUNDS
+            MENUITEM "允许 S&cripts(当前窗口)",     ID_OPTIONS_ALLOWSCRIPTS
+            MENUITEM "允许 Java Applet(当前窗口)",  ID_OPTIONS_ALLOWJAVAAPPLET
+
+            MENUITEM "允许 ActiveX(当前窗口)",      ID_OPTIONS_ALLOWACTIVEX
+        END
+        MENUITEM SEPARATOR
+        POPUP "页面翻译(当前窗口)"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        POPUP "&Web代理(当前窗口)"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "使用代理服务器",              ID_OPTIONS_USE_PROXY
+        MENUITEM SEPARATOR
+        MENUITEM "快速代理设置...",             ID_OPTIONS_SET_PROXY
+        POPUP "导入/导出代理"
+        BEGIN
+            MENUITEM "导出代理服务器...",           ID_OPTIONS_EXPORTPROXYLIST
+
+            MENUITEM "导入代理服务器...",           ID_OPTIONS_IMPORTPROXYLIST
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "浏览模式"
+        BEGIN
+            MENUITEM "用户自定义",                  ID_OPTIONS_BROWSEMODES_DEFAULT
+
+            MENUITEM "标准",                        ID_OPTIONS_BROWSEMODES_STANDARD
+
+            MENUITEM "新闻",                        ID_OPTIONS_BROWSEMODES_NEWS
+
+        END
+        POPUP "MyIE起动模式"
+        BEGIN
+            MENUITEM "打开空白页(&B)",              ID_OPTIONS_MYIESTARTUP_OPENBLANKPAGE
+
+            MENUITEM "打开主页(&H)",                ID_OPTIONS_MYIEGOHOME
+            MENUITEM "打开最后访问的页面(&R)",      ID_OPTIONS_MYIESTARTUP_RESUMELASTVISITEDPAGES
+
+            MENUITEM SEPARATOR
+            MENUITEM "打开启动组(&F)",              ID_OPTIONS_MYIESTARTUP_OPENFAVORITEPAGES
+
+            MENUITEM "打开启动组中的最爱(&M)",      ID_OPTIONS_MYIESTARTUP_OPENMOSTFAVORITEPAGES
+
+            MENUITEM "打开启动快捷组(&G)",          ID_OPTIONS_MYIESTARTUP_OPENSTARTUPGROUP
+
+            MENUITEM SEPARATOR
+            MENUITEM "不打开任何网页",              ID_OPTIONS_MYIESTARTUP_NONE
+
+        END
+        POPUP "打开新窗口"
+        BEGIN
+            MENUITEM "新地址",                      ID_OPTION_ALWAYS_NEW
+            MENUITEM "收藏夹&&链接",                ID_NEWWINDOW_FAV
+            MENUITEM "历史记录",                    ID_NEWWINDOW_HISTORY
+            MENUITEM "本地文件",                    ID_NEWWINDOW_FILE
+            MENUITEM "页面中的链接",                ID_OPTIONS_OPENLINKINNEWWINDOW
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "设置为缺省浏览器",            ID_OPTIONS_SETASDEFAULTBROWSER
+
+        MENUITEM "禁止状态条滚动字符",          ID_OPTIONS_URLINSTATUS
+        MENUITEM SEPARATOR
+        MENUITEM "MyIE 选项...",                ID_OPTIONS_MYIEOPTIONS
+        MENUITEM "Internet 选项...",            ID_TOOLS_INTERNETOPTIONS
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "编辑过滤器...",               ID_TOOLS_EDITPOPUPFILTERLIST
+        MENUITEM "加入弹出窗口过滤器\tCtrl+Q",  ID_TOOLS_ADDTOPOPUPFILTER
+        MENUITEM SEPARATOR
+        MENUITEM "使用弹出窗口过滤器",          ID_TOOLS_EABLEPOPUPFILTER
+        MENUITEM "当前窗口使用自动过滤\tAlt+P", ID_TOOLS_AUTOFILTER_CUR
+        MENUITEM "使用网页内容过滤",            ID_TOOLS_URL_FILTER
+        MENUITEM SEPARATOR
+        MENUITEM "电子邮件",                    ID_TOOLS_EMAIL
+        MENUITEM "地址簿",                      ID_TOOLS_ADDR
+        MENUITEM "同步(&S)...",                 ID_TOOLS_SYNC
+        MENUITEM SEPARATOR
+        POPUP "清除浏览纪录"
+        BEGIN
+            MENUITEM "全部清除",                    ID_TOOLS_ALL
+            MENUITEM "清除 Cookies",                ID_TOOLS_COOKIE
+            MENUITEM "清除地址栏",                  ID_TOOLS_CLEANADDR
+            MENUITEM "清除历史",                    ID_TOOLS_HISTORY
+            MENUITEM "清除 C&ache",                 ID_TOOLS_CACHE
+            MENUITEM "清除MyIE自动填表记录",        ID_TOOL_CLEANMYIEFORM
+        END
+        MENUITEM SEPARATOR
+        POPUP "外部工具"
+        BEGIN
+            MENUITEM "外部工具管理器",              ID_TOOLS_EXTERNALUTILITIES_UTILITYMANAGER
+
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "显示本机IP地址",              ID_TOOLS_IP
+        MENUITEM "显示可用内存资源",            ID_TOOLS_MEM
+        MENUITEM "显示Modem下载速度",           ID_TOOLS_BP
+        POPUP "设置MyIE面版"
+        BEGIN
+            MENUITEM "不使用面版",                  ID_TOOLS_SETBACKGROUNDPIC_NONE
+
+        END
+        MENUITEM SEPARATOR
+        POPUP "自动滚屏(&A)"
+        BEGIN
+            MENUITEM "当前窗口自动滚屏(&U)",        ID_TOOLS_AUTOSCROLL_USEAUTOSCROLLING
+
+            MENUITEM "所有窗口自动滚屏",            ID_TOOLS_AUTOSCROLL_ALL
+            MENUITEM "仅在下载结束后滚屏",          ID_TOOLS_AUTOSCROLL_AUTOSCROLLINGAFTERDOWNLOADING
+
+            MENUITEM SEPARATOR
+            MENUITEM "使用鼠标位置控制速度",        ID_TOOLS_MOUSE_SCR
+            MENUITEM SEPARATOR
+            MENUITEM "慢速(&S)",                    ID_TOOLS_AUTOSCROLL_SLOW
+            MENUITEM "中速(&M)",                    ID_TOOLS_AUTOSCROLL_MEDIUM
+
+            MENUITEM "快速(&F)",                    ID_TOOLS_AUTOSCROLL_FAST
+        END
+        POPUP "设置背景色(&B)"
+        BEGIN
+            MENUITEM "当前窗口为默认背景色",        ID_TOOLS_SETBG
+            MENUITEM "所有窗口为默认背景色",        ID_TOOLS_ALL_BK
+            MENUITEM "自动设置背景色",              ID_TOOLS_AUTOSETBG
+            MENUITEM SEPARATOR
+            MENUITEM "选择背景色...",               ID_TOOLS_SELBG
+        END
+        POPUP "自动刷新页面(&R)"
+        BEGIN
+            MENUITEM "当前窗口使用自动刷新",        ID_TOOLS_AUTOREF
+            MENUITEM "设置刷新频率",                ID_TOOLS_REFFRE
+        END
+        MENUITEM "简易收集面版...\tCtrl+G",     ID_TOOLS_COLLECT
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "层叠(&C)",                    ID_WINDOW_CASCADE
+        MENUITEM "垂直平铺(&V)\tCtrl+T",        ID_WINDOW_TILE_VERT
+        MENUITEM "水平平铺(&T)",                ID_WINDOW_TILE_HORZ
+        MENUITEM "排列图标",                    ID_WINDOW_ARRANGE
+        MENUITEM "还原窗口",                    ID_WINDOW_RESTOR
+        MENUITEM "最小化",                      ID_WINDOW_MIN
+        MENUITEM SEPARATOR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 MyIE(&A)",               ID_APP_ABOUT
+        MENUITEM "MyIE 帮助(&H)",               ID_HELP_HELP
+        MENUITEM SEPARATOR
+        MENUITEM "访问作者主页",                ID_HELP_HOMEPAGE
+        MENUITEM "给作者写信",                  ID_HELP_MAIL
+        MENUITEM "访问论坛",                    ID_HELP_FORUM
+    END
+END
+
+IDR_FONT_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP "字体"
+    BEGIN
+        MENUITEM "最大(&G)",                    ID_VIEW_FONTS_LARGEST
+        MENUITEM "较大(&L)",                    ID_VIEW_FONTS_LARGE
+        MENUITEM "中等(&M)",                    ID_VIEW_FONTS_MEDIUM
+        MENUITEM "较小(&S)",                    ID_VIEW_FONTS_SMALL
+        MENUITEM "最小(&A)",                    ID_VIEW_FONTS_SMALLEST
+    END
+END
+
+IDR_FAVORITES_POPUP MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Bogus",                       ID_BOGUS
+    MENUITEM "Best",                        ID_FAVORITES_BEST
+    MENUITEM "next",                        ID_TAB_NEXT
+    MENUITEM "pre",                         ID_TAB_PRE
+    MENUITEM "newwin",                      ID_NEWWINDOW
+    MENUITEM "group",                       ID_GROUP
+END
+
+IDR_RTAB MENU DISCARDABLE 
+BEGIN
+    POPUP "RTAB"
+    BEGIN
+        POPUP "加入"
+        BEGIN
+            MENUITEM "加入窗口过滤器\tCtrl+Q",      ID_RTAB_ADDTOPOPUPFILTER
+            MENUITEM "加入收藏夹",                  ID_RTAB_ADDFAV
+            POPUP "加入快捷组(&A)"
+            BEGIN
+                MENUITEM SEPARATOR
+            END
+        END
+        MENUITEM "添加网页一键通...",           ID_RTAB_ADDSC
+        MENUITEM "添加网页缩写...",             ID_RTAB_ADDALIAS
+        MENUITEM SEPARATOR
+        MENUITEM "设置固定标签名",              ID_RTAB_STICKNAME
+        MENUITEM "保护该窗口(&O)",              ID_RTAB_PROTECT
+        MENUITEM "锁定该标签(&L)\tAlt+X",       ID_RTAB_LOCK
+        MENUITEM "垂直平铺(&V)\tCtrl+T",        ID_WINDOW_TILE_VERT
+        MENUITEM SEPARATOR
+        MENUITEM "刷新(&R)\tF5",                ID_RTAB_REFRESH
+        POPUP "自动刷新页面"
+        BEGIN
+            MENUITEM "使用自动刷新",                ID_RTAB_AUTOREF
+            MENUITEM "设置刷新频率",                ID_RTAB_REFFRE
+        END
+        MENUITEM "停止(&P)\tEsc",               ID_RTAB_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "自动保存",                    ID_RTAB_AUTOSAVE
+        MENUITEM "关闭其他未锁定页面",          ID_RTAB_CLOSE_OTHER
+        MENUITEM "关闭(&C)\tCtrl+W",            ID_FILE_CLOSE_2
+    END
+END
+
+IDR_ENCODING MENU DISCARDABLE 
+BEGIN
+    POPUP "Encoding"
+    BEGIN
+        MENUITEM "自动选择",                    ID_VIEW_ENCODING_AUTO
+        MENUITEM SEPARATOR
+        MENUITEM "西欧字符",                    ID_VIEW_ENCODING_WESTERNEUROPEAN
+
+        MENUITEM SEPARATOR
+        MENUITEM "简体中文",                    ID_VIEW_ENCODING_CHINESESIMPLIFIED
+
+        MENUITEM "繁体中文",                    ID_VIEW_ENCODING_CHINESETRADITIONAL
+
+        MENUITEM SEPARATOR
+        MENUITEM "日文(Auto Select)",           ID_VIEW_ENCODING_JANESEAUTO
+        MENUITEM "日文(Shift-JIS)",             ID_VIEW_ENCODING_JANESE
+        MENUITEM "日文(EUC)",                   ID_VIEW_ENCODING_JANESEEUC
+    END
+END
+
+IDR_RFAV_URL MENU DISCARDABLE 
+BEGIN
+    POPUP "RFavURL"
+    BEGIN
+        POPUP "加入快捷组(&A)"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "加入启动组",                  ID_RFAV_START
+        MENUITEM "在新窗口中打开",              ID_RFAV_OPEN_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "设为最爱网页",                ID_RFAV_MOST_FAV
+        MENUITEM "添加网页缩写...",             ID_RFAV_ALIAS
+        MENUITEM "添加网页一键通...",           ID_RFAV_ADDSHORTCUT
+        MENUITEM SEPARATOR
+        MENUITEM "复制地址",                    ID_RFAV_COPY
+        MENUITEM "删除",                        ID_RFAV_DEL
+        MENUITEM "重命名",                      ID_RFAV_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "属性...",                     ID_RFAV_PROPERTY
+    END
+END
+
+IDR_RFAV_FOLDER MENU DISCARDABLE 
+BEGIN
+    POPUP "RFavFolder"
+    BEGIN
+        MENUITEM "打开全部链接",                ID_RFAV_OPENALL
+        MENUITEM "打开最爱的链接",              ID_RFAVFOLDER_OPENMOSTFAVORITES
+
+        MENUITEM SEPARATOR
+        MENUITEM "设为启动组",                  ID_RFAV_START_FOLDER
+        MENUITEM "设为最爱目录",                ID_RFAV_MOST_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "查找...",                     ID_RFAVFOLDER_FIND
+        MENUITEM "恢复字母排序",                ID_RFAVFOLDER_RESET
+    END
+END
+
+IDR_SPEED MENU DISCARDABLE 
+BEGIN
+    POPUP "速度"
+    BEGIN
+        MENUITEM "很快",                        ID_SP_FASTER
+        MENUITEM "快速",                        ID_SP_FAST
+        MENUITEM "一般",                        ID_SP_NOR
+        MENUITEM "较慢",                        ID_SP_SLOW
+        MENUITEM "慢速",                        ID_SP_SLOWER
+        MENUITEM "无效",                        ID_SP_INVALID
+    END
+END
+
+IDR_F2F12 MENU DISCARDABLE 
+BEGIN
+    POPUP "F"
+    BEGIN
+        MENUITEM "2",                           ID_F_2
+        MENUITEM "3",                           ID_F_3
+        MENUITEM "4",                           ID_F_4
+        MENUITEM "5",                           ID_F_5
+        MENUITEM "6",                           ID_F_6
+        MENUITEM "7",                           ID_F_7
+        MENUITEM "8",                           ID_F_8
+        MENUITEM "9",                           ID_F_9
+        MENUITEM "10",                          ID_F_10
+        MENUITEM "11",                          ID_F_11
+        MENUITEM "12",                          ID_F_12
+    END
+    POPUP "C"
+    BEGIN
+        MENUITEM "1",                           ID_C_1
+        MENUITEM "2",                           ID_C_2
+        MENUITEM "3",                           ID_C_3
+        MENUITEM "4",                           ID_C_4
+        MENUITEM "5",                           ID_C_5
+        MENUITEM "6",                           ID_C_6
+        MENUITEM "7",                           ID_C_7
+        MENUITEM "8",                           ID_C_8
+        MENUITEM "9",                           ID_C_9
+        MENUITEM "0",                           ID_C_0
+    END
+END
+
+IDR_HIS_FOLDER MENU DISCARDABLE 
+BEGIN
+    POPUP "HisFolder"
+    BEGIN
+        MENUITEM "删除(&D)",                    ID_HISFOLDER_DELETE
+    END
+END
+
+IDR_HIS_URL MENU DISCARDABLE 
+BEGIN
+    POPUP "HisURL"
+    BEGIN
+        MENUITEM "加入收藏夹(&A)...",           ID_HISURL_ADDTOFAVORITES
+        MENUITEM SEPARATOR
+        MENUITEM "删除(&D)",                    ID_HISURL_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "属性(&P)",                    ID_HISURL_PROPERTIES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "0",            ID_C_0,                 VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_C_1,                 VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_SC_SAVEFORM,         VIRTKEY, ALT, NOINVERT
+    192,            ID_FILE_HIDE,           VIRTKEY, ALT, NOINVERT
+    "2",            ID_C_2,                 VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_SC_SAVEGENFORM,      VIRTKEY, ALT, NOINVERT
+    "3",            ID_C_3,                 VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_C_4,                 VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_C_5,                 VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_C_6,                 VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_C_7,                 VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_C_8,                 VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_C_9,                 VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_FILE_AUTOSAVE,       VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_FAVORITES_ADDTOFAVORITES, VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_ADDR_FOCUS,          VIRTKEY, ALT, NOINVERT
+    "E",            ID_FILE_QUICKSAVE,      VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_TOOLS_COLLECT,       VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_FILE_NEW_S,          VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_FILE_NEW_S,          VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "L",            ID_FILE_OPENF,          VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_ALL_PAGE_LINKS,      VIRTKEY, ALT, NOINVERT
+    "N",            ID_NEWWINDOW,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW_CLIP,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "O",            ID_FILE_OPENF,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_TOOLS_AUTOFILTER_CUR, VIRTKEY, ALT, NOINVERT
+    "Q",            ID_TOOLS_ADDTOPOPUPFILTER, VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_SC_FILLFORM,         VIRTKEY, ALT, NOINVERT
+    "R",            ID_VIEW_REFRESH,        VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVEAS,         VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVEHTML,       VIRTKEY, ALT, NOINVERT
+    "S",            ID_FILE_AUTOSAVE,       VIRTKEY, CONTROL, ALT, NOINVERT
+    "T",            ID_WINDOW_TILE_VERT,    VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_VIEW_STOP,           VIRTKEY, NOINVERT
+    VK_F1,          ID_FILE_NEW_BLANK,      VIRTKEY, NOINVERT
+    VK_F10,         ID_F_10,                VIRTKEY, NOINVERT
+    VK_F11,         ID_F_11,                VIRTKEY, NOINVERT
+    VK_F11,         ID_F_11,                VIRTKEY, NOINVERT
+    VK_F11,         ID_VIEW_MENUBAR,        VIRTKEY, CONTROL, NOINVERT
+    VK_F12,         ID_F_12,                VIRTKEY, NOINVERT
+    VK_F2,          ID_F_2,                 VIRTKEY, NOINVERT
+    VK_F3,          ID_F_3,                 VIRTKEY, NOINVERT
+    VK_F4,          ID_F_4,                 VIRTKEY, NOINVERT
+    VK_F5,          ID_F_5,                 VIRTKEY, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_F_6,                 VIRTKEY, NOINVERT
+    VK_F7,          ID_F_7,                 VIRTKEY, NOINVERT
+    VK_F8,          ID_F_8,                 VIRTKEY, NOINVERT
+    VK_F9,          ID_F_9,                 VIRTKEY, NOINVERT
+    VK_HOME,        ID_GO_START_PAGE,       VIRTKEY, ALT, NOINVERT
+    VK_LEFT,        ID_TAB_PRE,             VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_GO_BACK,             VIRTKEY, ALT, NOINVERT
+    VK_RIGHT,       ID_TAB_NEXT,            VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_GO_FORWARD,          VIRTKEY, ALT, NOINVERT
+    "W",            ID_FILE_CLOSE_1,        VIRTKEY, CONTROL, NOINVERT
+    "W",            ID_FILE_CLOSEALL,       VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "X",            ID_VIEW_LOCK,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDOCLOSE,      VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 246, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About MyIE"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,176,10,20,20
+    LTEXT           "网际畅游  MyIE Web Browser",IDC_STATIC,39,11,115,8,
+                    SS_NOPREFIX
+    DEFPUSHBUTTON   "确定",IDOK,193,93,46,14,WS_GROUP
+    LTEXT           "联系信箱: myie@gmx.net",IDC_STATIC,39,56,114,8
+    LTEXT           "论坛: http://forum.isfamous.com/",IDC_STATIC,39,79,150,
+                    8
+    LTEXT           "版本 3.2DC (b475)",IDC_STATIC,39,23,96,8
+    LTEXT           "主页: http://changyou.mainpage.net/",IDC_STATIC,39,67,
+                    153,10
+END
+
+IDD_POPUPLIST DIALOG DISCARDABLE  0, 0, 278, 237
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "弹出窗口过滤"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "过滤重复打开的弹出窗口",IDC_FILTER_DUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,104,10
+    CONTROL         "自动过滤弹出窗口(所有窗口)",IDC_AUTO_FILTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,17,120,10
+    CONTROL         "使用URL列表过滤弹出窗口(所有窗口)",IDC_ENABLE_POPUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,27,218,10
+    CONTROL         "List1",IDD_POPUPLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_EDITLABELS | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,57,264,155
+    PUSHBUTTON      "插入",IDC_INSERT,7,216,50,14
+    PUSHBUTTON      "编辑",IDC_EDIT,61,216,50,14
+    PUSHBUTTON      "删除",IDC_DELETE,115,216,50,14
+    LTEXT           "需要过滤的 URL （可以使用*）",IDC_STATIC,7,44,205,8
+END
+
+IDD_SET_PROXY DIALOG DISCARDABLE  0, 0, 337, 259
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "快速设置代理服务器"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "使用代理",IDC_USER_PROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,3,50,12
+    PUSHBUTTON      "新增",IDC_PROXY_NEW,84,198,38,14
+    PUSHBUTTON      "修改",IDC_MODIFYPROXY,126,198,38,14
+    PUSHBUTTON      "删除",IDC_PROXY_DEL,168,198,38,14
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,215,
+                    198,9,14
+    CONTROL         "List2",IDC_PROXY_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,83,18,248,176
+    EDITTEXT        IDC_BYPASS,4,229,327,12,ES_MULTILINE | ES_AUTOHSCROLL
+    CONTROL         "使用Web代理/翻译",IDC_USE_WEB_PROXY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,64,3,78,12
+    DEFPUSHBUTTON   "确定",IDOK,220,243,50,14
+    PUSHBUTTON      "取消",IDCANCEL,281,243,50,14
+    LTEXT           "下列地址开头的不使用代理服务器， 以空格( )隔开",
+                    IDC_STATIC,4,219,185,8
+    CONTROL         "List1",IDC_CATES,"SysListView32",LVS_LIST | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,4,18,78,176
+    PUSHBUTTON      "新建",IDC_NEWCATE,4,198,29,14
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,67,198,
+                    9,14
+    PUSHBUTTON      "删除",IDC_DELCATE,35,198,29,14
+END
+
+IDD_EXTERN_UTIL DIALOG DISCARDABLE  0, 0, 306, 227
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "外部工具管理器"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_EXTERN_UTIL,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,20,292,150
+    PUSHBUTTON      "加入",IDC_ADD_UTIL,7,206,46,14
+    PUSHBUTTON      "修改",IDC_MOD_UTIL,56,206,46,14
+    PUSHBUTTON      "删除",IDC_DEL_UTIL,104,206,46,14
+    DEFPUSHBUTTON   "确定",IDOK,203,206,46,14
+    PUSHBUTTON      "取消",IDCANCEL,253,206,46,14
+    LTEXT           "管理外部工具",IDC_STATIC,7,7,58,8
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,153,
+                    206,8,14
+    LTEXT           "名称",IDC_STATIC,7,175,16,8
+    EDITTEXT        IDC_NAME,27,172,67,14,ES_AUTOHSCROLL
+    LTEXT           "工具命令",IDC_STATIC,99,175,35,8
+    EDITTEXT        IDC_COMMAND,134,172,150,14,ES_AUTOHSCROLL
+    CONTROL         "随MyIE启动该工具",IDC_STARTUP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,190,79,10
+    CONTROL         "随MyIE关闭该工具",IDC_CLOSEUTIL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,99,190,80,10
+    PUSHBUTTON      "...",IDC_BROWSER_FILE,285,172,14,14
+END
+
+IDD_SET_KEY DIALOG DISCARDABLE  0, 0, 304, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置一键通"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_DISABLED | WS_BORDER | WS_TABSTOP,7,2,290,110
+    COMBOBOX        IDC_KEYLIST,29,115,78,82,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,29,131,268,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "更改",IDC_UPDATE,28,150,50,14
+    DEFPUSHBUTTON   "确定",IDOK,198,150,46,14
+    PUSHBUTTON      "取消",IDCANCEL,251,150,46,14
+    LTEXT           "按键:",IDC_STATIC,7,116,20,8
+    LTEXT           "URL:",IDC_STATIC,7,132,18,8
+END
+
+IDD_SET_ALIAS DIALOG DISCARDABLE  0, 0, 312, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "编辑网址缩写"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,3,257,165
+    PUSHBUTTON      "增加",IDC_NEW,269,3,36,14
+    PUSHBUTTON      "修改",IDC_UPDATE,269,24,36,14
+    PUSHBUTTON      "删除",IDC_DEL,269,47,36,14
+    PUSHBUTTON      "取消",IDCANCEL,269,154,36,14
+    DEFPUSHBUTTON   "确定",IDOK,269,135,36,14
+END
+
+IDD_INPUT_ALIAS DIALOG DISCARDABLE  0, 0, 189, 70
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入网址缩写"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_ALIAS,33,7,67,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_URL,33,28,148,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,77,49,50,14
+    PUSHBUTTON      "取消",IDCANCEL,132,49,50,14
+    LTEXT           "缩写：",IDC_STATIC,7,10,25,8
+    LTEXT           "URL:",IDC_STATIC,7,31,18,8
+END
+
+IDD_CUSTOMIZE DIALOG DISCARDABLE  0, 0, 325, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自定义工具条"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,273,7,45,14
+    PUSHBUTTON      "取消",IDCANCEL,273,24,45,14
+    CONTROL         "List1",IDC_AVABTN,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,20,105,111
+    LTEXT           "可用工具条按钮",IDC_STATIC,7,7,119,8
+    CONTROL         "List2",IDC_CURBTN,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | 
+                    WS_BORDER | WS_TABSTOP,165,20,105,111
+    LTEXT           "当前工具条按钮",IDC_STATIC,166,7,76,8
+    PUSHBUTTON      ">>",IDC_ADD,120,47,38,14
+    PUSHBUTTON      "<<",IDC_REMOVE,120,70,38,14
+    PUSHBUTTON      "上移",IDC_MOVEUP,273,97,45,14
+    PUSHBUTTON      "下移",IDC_MOVWDOWN,273,117,45,14
+    CONTROL         "显示彩色工具图标",IDC_COLOR_ICON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,165,152,80,10
+    COMBOBOX        IDC_TEXT_OPT,50,136,110,49,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "文字选项：",IDC_STATIC,7,138,42,8
+    LTEXT           "图标选项：",IDC_STATIC,7,153,41,8
+    COMBOBOX        IDC_ICON_OPT,50,150,110,57,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_STICKNAME DIALOG DISCARDABLE  0, 0, 143, 47
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入标签的固定名字"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_STICKNAME,7,7,129,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,7,26,50,14
+    PUSHBUTTON      "取消",IDCANCEL,86,26,50,14
+END
+
+IDD_FILEOPEN DIALOG DISCARDABLE  0, 0, 254, 83
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "打开"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "",IDC_ADDRESS,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP,37,
+                    31,210,136
+    DEFPUSHBUTTON   "确定",IDOK,97,62,41,14
+    PUSHBUTTON      "取消",IDCANCEL,149,62,43,14
+    PUSHBUTTON      "浏览...",IDC_BROWSE,203,62,43,14
+    LTEXT           "请键入文档或文件夹的Internet地址， MyIE 将为你打开它。",
+                    IDC_STATIC,7,7,240,17
+    LTEXT           "打开：",IDC_STATIC,7,33,25,8
+END
+
+IDD_PASSWORD DIALOG DISCARDABLE  0, 0, 202, 79
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入口令"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_PASSWORD,25,22,150,14,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "记住本次口令",IDC_REM_PSW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,25,42,168,10
+    DEFPUSHBUTTON   "确定",IDOK,25,58,50,14
+    PUSHBUTTON      "取消",IDCANCEL,128,58,50,14
+    LTEXT           "请输入口令：",IDC_STATIC,25,7,138,8
+END
+
+IDD_ORG_GROUP DIALOG DISCARDABLE  0, 0, 380, 221
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "整理快捷组"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List4",IDC_GROUP_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,14,83,181
+    PUSHBUTTON      "新建组",IDC_NEW_GROUP,7,200,39,14
+    PUSHBUTTON      "删除组",IDC_DEL_GROUP,50,200,39,14
+    PUSHBUTTON      "插入",IDC_INSERT,95,200,37,14
+    PUSHBUTTON      "更新",IDC_UPDATE,137,200,37,14
+    PUSHBUTTON      "删除",IDC_DELETE,179,200,37,14
+    CONTROL         "Spin2",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,225,
+                    200,10,14
+    DEFPUSHBUTTON   "关闭",IDOK,329,200,44,14
+    LTEXT           "现有组：",IDC_STATIC,7,4,33,8
+    LTEXT           "组内成员：",IDC_STATIC,91,4,41,8
+    CONTROL         "List3",IDC_URL_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,91,14,282,181
+END
+
+IDD_GROUP_URL DIALOG DISCARDABLE  0, 0, 187, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "快捷组的URL"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_NAME,7,17,77,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_URL,7,51,173,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,130,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,24,50,14
+    LTEXT           "名字：",IDC_STATIC,7,7,25,8
+    LTEXT           "网址：",IDC_STATIC,7,40,25,8
+END
+
+IDD_PROXY DIALOG DISCARDABLE  0, 0, 187, 100
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "代理服务"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_NAME,7,18,92,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROXY,7,48,164,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_SPEED,7,78,48,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,130,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,130,24,50,14
+    LTEXT           "代理名称",IDC_STATIC,7,7,33,8
+    LTEXT           "代理地址",IDC_STATIC,7,37,33,8
+    LTEXT           "代理速度",IDC_STATIC,7,68,33,8
+END
+
+IDD_SETREFRESH DIALOG DISCARDABLE  0, 0, 165, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设置自动刷新"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,30,44,50,14
+    PUSHBUTTON      "取消",IDCANCEL,88,44,50,14
+    LTEXT           "每隔",IDC_STATIC,7,10,17,8
+    EDITTEXT        IDC_REFINTERVAL,32,7,60,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "秒自动刷新",IDC_STATIC,98,10,41,8
+    LTEXT           "注意：请不要设置过短的间隔时间",IDC_STATIC,32,26,121,8
+END
+
+IDD_SELPROXYCAT DIALOG DISCARDABLE  0, 0, 165, 59
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择代理分类"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,25,38,50,14
+    PUSHBUTTON      "取消",IDCANCEL,90,38,50,14
+    LTEXT           "代理分类",IDC_STATIC,7,9,33,8
+    COMBOBOX        IDC_PROXYCATS,43,7,115,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "先清空该类代理",IDC_CLEAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,43,23,72,10
+END
+
+IDD_QUICKSEARCH DIALOG DISCARDABLE  0, 0, 346, 189
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "快捷搜索"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,235,168,50,14
+    PUSHBUTTON      "取消",IDCANCEL,289,168,50,14
+    CONTROL         "List1",IDC_SEACHLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,7,332,138
+    PUSHBUTTON      "加入",IDC_INSERT,7,168,43,14
+    PUSHBUTTON      "修改",IDC_UPDATE,55,168,43,14
+    PUSHBUTTON      "删除",IDC_DELETE,103,168,43,14
+    EDITTEXT        IDC_NAME,49,147,76,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SEARCHENGINE,170,147,169,14,ES_AUTOHSCROLL
+    LTEXT           "名称缩写：",IDC_STATIC,7,150,41,8
+    LTEXT           "搜索引擎：",IDC_STATIC,128,150,41,8
+END
+
+IDD_COLLECTOR DIALOGEX 0, 0, 224, 137
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "简易收集面版"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_TXT,0,0,224,137,ES_MULTILINE | ES_WANTRETURN | 
+                    WS_VSCROLL
+END
+
+IDD_LINKLIST DIALOG DISCARDABLE  0, 0, 188, 102
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "页面链接"
+FONT 9, "宋体"
+BEGIN
+END
+
+IDD_PROPPAGE_GENERAL DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "常规"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "只允许运行一个MyIE实例",IDC_ONLYONE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,20,103,8
+    CONTROL         "最小化到系统托盘",IDC_SYSTRAY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,30,80,10
+    CONTROL         "不弹出脚本错误对话框",IDC_KEEPSILENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,41,97,8
+    CONTROL         "不允许随意修改主页",IDC_LOCKHOME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,51,88,10
+    CONTROL         "全部关闭时需确认",IDC_CONFIRMCLOSEALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,123,20,80,8
+    CONTROL         "退出时需要确认",IDC_COMFIRMEXIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,123,30,71,9
+    CONTROL         "使用鼠标控制",IDC_MOUSEGESTURE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,40,64,10
+    CONTROL         "显示动画图标",IDC_DISP_ANIICON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,123,51,64,10
+    CONTROL         "使用单列的收藏菜单",IDC_SINGLEMENU,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,84,88,9
+    CONTROL         "显示打开本层链接菜单",IDC_DISPLAY_OPENALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,97,96,10
+    CONTROL         "显示加入当前收藏菜单",IDC_ADDFAV,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,111,96,10
+    EDITTEXT        IDC_MAXMENU,174,80,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "使用紧凑的收藏条",IDC_COMPACTFAVBAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,98,78,10
+    GROUPBOX        "选项",IDC_STATIC,7,7,212,60
+    GROUPBOX        "收藏",IDC_STATIC,7,71,212,53
+    LTEXT           "最大菜单宽度",IDC_STATIC,122,84,49,8
+    EDITTEXT        IDC_SKINPATH,66,139,135,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GROUP_PATH,66,155,135,14,ES_AUTOHSCROLL
+    GROUPBOX        "缺省路径",IDC_STATIC,7,130,212,44
+    LTEXT           "缺省皮肤目录",IDC_STATIC,14,143,50,8
+    LTEXT           "Group路径",IDC_STATIC,14,156,37,8
+END
+
+IDD_PROPPAGE_WINDOW DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "窗口"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "新地址",IDC_NEW_ADDRESS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,16,40,10
+    CONTROL         "收藏夹&&链接",IDC_FAV_LNK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,16,64,10
+    CONTROL         "历史记录",IDC_HISTORY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,148,16,48,10
+    CONTROL         "本地文件",IDC_LOCALFILE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,28,48,10
+    CONTROL         "页面中的链接",IDC_LINKSINPAGE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,28,64,10
+    CONTROL         "激活新开的窗口",IDC_ACTIVATE_NEWWIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,57,72,10
+    CONTROL         "默认次序",IDC_DEFAULT_SEQ,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,57,71,48,10
+    CONTROL         "向前",IDC_NEXT_SEQ,"Button",BS_AUTORADIOBUTTON,118,71,
+                    32,10
+    CONTROL         "先后",IDC_PRE_SEQ,"Button",BS_AUTORADIOBUTTON,163,71,32,
+                    10
+    CONTROL         "空白窗口",IDC_BLANKWIN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,61,98,48,10
+    CONTROL         "主页",IDC_HOME,"Button",BS_AUTORADIOBUTTON,121,99,32,10
+    CONTROL         "当前窗口",IDC_CURWIN,"Button",BS_AUTORADIOBUTTON,161,98,
+                    48,10
+    EDITTEXT        IDC_MAXWIN,90,141,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_INTERVAL,90,156,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "窗口控制",IDC_STATIC,7,130,212,44
+    LTEXT           "一次打开窗口最大数",IDC_STATIC,13,144,73,8
+    LTEXT           "窗口打开间隔时间",IDC_STATIC,13,158,65,8
+    LTEXT           "秒",IDC_STATIC,129,159,11,8
+    GROUPBOX        "如何新建窗口",IDC_STATIC,7,88,212,37,WS_GROUP
+    GROUPBOX        "在新窗口中打开",IDC_STATIC,7,7,212,34
+    GROUPBOX        "激活窗口",IDC_STATIC,7,45,212,39
+    LTEXT           "激活顺序:",IDC_STATIC,15,72,37,8
+    LTEXT           "Ctrl+N:",IDC_STATIC,13,98,29,8
+    LTEXT           "鼠标向下:",IDC_STATIC,13,112,37,8
+    CONTROL         "空白窗口",IDC_BLANKWIN2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,61,112,48,10
+    CONTROL         "主页",IDC_HOME2,"Button",BS_AUTORADIOBUTTON,121,112,32,
+                    10
+    CONTROL         "当前窗口",IDC_CURWIN2,"Button",BS_AUTORADIOBUTTON,161,
+                    112,48,10
+END
+
+IDD_PROPPAGE_TAB DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "标签"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_MAXWIDTH,76,17,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MINWIDTH,166,17,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MAXCHARS,76,31,34,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "标签栏显示在下方",IDC_BOTTOM_TAB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,13,70,80,10
+    CONTROL         "标签栏显示在上方",IDC_TAB_TOP,"Button",
+                    BS_AUTORADIOBUTTON,117,70,80,10
+    CONTROL         "多行标签",IDC_MULTILINE_TAB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,106,48,10
+    CONTROL         "自适应标签",IDC_AUTOFIT_TAB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,117,106,56,10
+    CONTROL         "显示新标签在当前标签后",IDC_DISP_NEXT_TAB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,117,104,10
+    CONTROL         "使用平面按钮式标签",IDC_FLATBUTAB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,117,117,88,10
+    COMBOBOX        IDC_LDBCLICK,79,130,77,65,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_MCLIK,79,144,77,70,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_RCLIK,79,158,77,72,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    GROUPBOX        "标签宽度",IDC_STATIC,7,7,212,41
+    LTEXT           "最大标签字符数",IDC_STATIC,13,34,57,8
+    LTEXT           "最大标签宽度",IDC_STATIC,13,19,52,8
+    LTEXT           "最小标签宽度",IDC_STATIC,114,19,52,9
+    GROUPBOX        "标签位置",IDC_STATIC,7,56,212,32
+    GROUPBOX        "标签设置",IDC_STATIC,7,94,212,80
+    LTEXT           "左键双击标签时",IDC_STATIC,13,132,57,8
+    LTEXT           "中键单击标签时",IDC_STATIC,13,146,57,8
+    LTEXT           "右键加Ctrl 键时",IDC_STATIC,13,159,61,8
+END
+
+IDD_PROPPAGE_DOWNLOAD DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "下载"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "下载图片",IDC_DLIMG,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,26,57,10
+    CONTROL         "下载声音",IDC_DLSOUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,46,58,10
+    CONTROL         "下载视频",IDC_DLVIDEO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,66,52,10
+    CONTROL         "播放动画",IDC_PLAY_ANIMATION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,86,48,10
+    CONTROL         "允许Scripts",IDC_DLJS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,26,66,10
+    CONTROL         "允许Java Applet",IDC_DLAPPLET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,46,72,10
+    CONTROL         "允许ActiveX",IDC_DLACTIVEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,102,66,59,10
+    COMBOBOX        IDC_SELECTTOOLS,18,142,188,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "缺省下载控制",IDC_STATIC,7,7,212,105
+    GROUPBOX        "选择下载工具",IDC_STATIC,7,122,212,52
+    LTEXT           "新选项将应用于新窗口中。",IDC_STATIC,37,158,97,8
+END
+
+IDD_PROPPAGE_OTHERS DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "其他"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "打开空白窗口",IDC_START_BLANK,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,12,18,64,10
+    CONTROL         "打开主页",IDC_START_HOME,"Button",BS_AUTORADIOBUTTON,
+                    118,18,48,10
+    CONTROL         "打开上次访问的页面",IDC_START_LASTVISIT,"Button",
+                    BS_AUTORADIOBUTTON,12,29,88,10
+    CONTROL         "打开收藏夹的启动组",IDC_START_STARTFAV,"Button",
+                    BS_AUTORADIOBUTTON,118,29,88,10
+    CONTROL         "打开启动组中的最爱",IDC_START_MOSTFAV,"Button",
+                    BS_AUTORADIOBUTTON,12,41,88,10
+    CONTROL         "打开启动快捷组",IDC_START_STARTGROUP,"Button",
+                    BS_AUTORADIOBUTTON,118,41,72,10
+    CONTROL         "不打开任何网页",IDC_START_NONE,"Button",
+                    BS_AUTORADIOBUTTON,12,53,72,10
+    EDITTEXT        IDC_CE1,69,80,59,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CE2,145,80,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SE1,69,94,59,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SE2,145,94,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CSE1,69,108,59,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CSE2,145,108,32,14,ES_AUTOHSCROLL
+    GROUPBOX        "域名自动完成",IDC_STATIC,7,73,212,51
+    LTEXT           "Ctrl",IDC_STATIC,13,83,24,8
+    LTEXT           "Shift",IDC_STATIC,13,97,29,8
+    LTEXT           "Ctrl+Shift",IDC_STATIC,13,110,41,8
+    LTEXT           "+",IDC_STATIC,136,83,8,8
+    LTEXT           "+",IDC_STATIC,136,97,8,8
+    LTEXT           "+",IDC_STATIC,136,110,8,8
+    GROUPBOX        "启动时",IDC_STATIC,7,7,212,63
+    GROUPBOX        "删除输入的地址",IDC_STATIC,7,129,212,45
+    COMBOBOX        IDC_ADDRS,13,139,194,122,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "删除",IDC_DELETE,96,156,50,14
+    PUSHBUTTON      "全部删除",IDC_DELETEALL,156,156,50,14
+END
+
+IDD_ADDURLHERE DIALOG DISCARDABLE  0, 0, 242, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "加入收藏夹"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,185,10,50,14
+    PUSHBUTTON      "取消",IDCANCEL,185,29,50,14
+    EDITTEXT        IDC_NAME,40,11,138,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_URL,40,27,138,14,ES_AUTOHSCROLL
+    LTEXT           "名字：",IDC_STATIC,7,13,25,8
+    LTEXT           "网址：",IDC_STATIC,7,29,25,8
+    LTEXT           "目录：",IDC_STATIC,7,52,25,8
+    EDITTEXT        IDC_FOLDER,40,51,180,27,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_PROPPAGE_SAVE DIALOG DISCARDABLE  0, 0, 226, 181
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "保存"
+FONT 9, "宋体"
+BEGIN
+    GROUPBOX        "保存路径",IDC_STATIC,7,7,212,81
+    EDITTEXT        IDC_SAVEPATH,65,18,145,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IMAGEPATH,65,46,145,13,ES_AUTOHSCROLL
+    LTEXT           "预设保存路径",IDC_STATIC,13,21,52,11
+    LTEXT           "图片保存路径",IDC_STATIC,13,48,49,10
+    GROUPBOX        "自动保存",IDC_STATIC,7,103,212,71
+    LTEXT           "自动保存：",IDC_STATIC,16,125,41,8
+    COMBOBOX        IDC_AUTOSAVE,65,123,138,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "按站点分目录保存",IDC_CATEWITHSITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,151,124,10
+END
+
+IDD_URL_FILTER DIALOG DISCARDABLE  0, 0, 278, 237
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "内容过滤"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "使用网页内容过滤(所有窗口)",IDC_URL_FILTER,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,120,10
+    CONTROL         "List1",IDC_URL_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,38,264,174
+    LTEXT           "需要过滤掉的图片，广告等内容的URL （可以使用*）",
+                    IDC_STATIC,7,26,189,8
+    PUSHBUTTON      "插入",IDC_INSERT,7,216,50,14
+    PUSHBUTTON      "编辑",IDC_EDIT,61,216,50,14
+    PUSHBUTTON      "删除",IDC_DELETE,115,216,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_POPUPLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_SET_PROXY, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 331
+        BOTTOMMARGIN, 257
+    END
+
+    IDD_EXTERN_UTIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_SET_KEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_SET_ALIAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_INPUT_ALIAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_CUSTOMIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_STICKNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_FILEOPEN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_ORG_GROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 373
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 214
+    END
+
+    IDD_GROUP_URL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_PROXY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_SETREFRESH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_SELPROXYCAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_QUICKSEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_LINKLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 181
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_PROPPAGE_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_PROPPAGE_WINDOW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_PROPPAGE_TAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_PROPPAGE_DOWNLOAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_PROPPAGE_OTHERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_ADDURLHERE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_PROPPAGE_SAVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 174
+    END
+
+    IDD_URL_FILTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 230
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_SET_KEY DLGINIT
+BEGIN
+    IDC_KEYLIST, 0x403, 3, 0
+0x3246, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3346, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3446, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3546, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3646, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3746, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3846, "\000" 
+    IDC_KEYLIST, 0x403, 3, 0
+0x3946, "\000" 
+    IDC_KEYLIST, 0x403, 4, 0
+0x3146, 0x0030, 
+    IDC_KEYLIST, 0x403, 4, 0
+0x3146, 0x0031, 
+    IDC_KEYLIST, 0x403, 4, 0
+0x3146, 0x0032, 
+    0
+END
+
+IDD_PROXY DLGINIT
+BEGIN
+    IDC_SPEED, 0x403, 5, 0
+0xdece, 0xa7d0, "\000" 
+    IDC_SPEED, 0x403, 5, 0
+0xfdc2, 0xd9cb, "\000" 
+    IDC_SPEED, 0x403, 5, 0
+0xcfbd, 0xfdc2, "\000" 
+    IDC_SPEED, 0x403, 5, 0
+0xbbd2, 0xe3b0, "\000" 
+    IDC_SPEED, 0x403, 5, 0
+0xecbf, 0xd9cb, "\000" 
+    IDC_SPEED, 0x403, 5, 0
+0xdcba, 0xecbf, "\000" 
+    0
+END
+
+IDD_CUSTOMIZE DLGINIT
+BEGIN
+    IDC_TEXT_OPT, 0x403, 11, 0
+0xdece, 0xc4ce, 0xd6d7, 0xeab1, 0xa9c7, "\000" 
+    IDC_TEXT_OPT, 0x403, 13, 0
+0xd4cf, 0xbeca, 0xc4ce, 0xd6d7, 0xeab1, 0xa9c7, "\000" 
+    IDC_TEXT_OPT, 0x403, 23, 0
+0xa1d1, 0xf1d4, 0xd4d0, 0xc4b5, 0xabbd, 0xc4ce, 0xd6d7, 0xc3d6, 0xdad3, 
+0xd2d3, 0xe0b2, "\000" 
+    IDC_ICON_OPT, 0x403, 7, 0
+0xf3b4, 0xbccd, 0xeab1, "\000" 
+    IDC_ICON_OPT, 0x403, 7, 0
+0xa1d0, 0xbccd, 0xeab1, "\000" 
+    0
+END
+
+IDD_PROPPAGE_TAB DLGINIT
+BEGIN
+    IDC_LDBCLICK, 0x403, 7, 0
+0xdece, 0xa6b9, 0xdcc4, "\000" 
+    IDC_LDBCLICK, 0x403, 13, 0
+0xd8b9, 0xd5b1, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_LDBCLICK, 0x403, 13, 0
+0xa3b1, 0xe6b4, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_LDBCLICK, 0x403, 11, 0
+0xa3b1, 0xe6b4, 0xaace, 0x5448, 0x4c4d, "\000" 
+    IDC_LDBCLICK, 0x403, 9, 0
+0xd4d7, 0xafb6, 0xa3b1, 0xe6b4, "\000" 
+    IDC_LDBCLICK, 0x403, 9, 0
+0xf8cb, 0xa8b6, 0xb0b4, 0xdabf, "\000" 
+    IDC_MCLIK, 0x403, 7, 0
+0xdece, 0xa6b9, 0xdcc4, "\000" 
+    IDC_MCLIK, 0x403, 13, 0
+0xd8b9, 0xd5b1, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_MCLIK, 0x403, 13, 0
+0xa3b1, 0xe6b4, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_MCLIK, 0x403, 11, 0
+0xa3b1, 0xe6b4, 0xaace, 0x5448, 0x4c4d, "\000" 
+    IDC_MCLIK, 0x403, 9, 0
+0xd4d7, 0xafb6, 0xa3b1, 0xe6b4, "\000" 
+    IDC_MCLIK, 0x403, 9, 0
+0xf8cb, 0xa8b6, 0xb0b4, 0xdabf, "\000" 
+    IDC_RCLIK, 0x403, 7, 0
+0xdece, 0xa6b9, 0xdcc4, "\000" 
+    IDC_RCLIK, 0x403, 13, 0
+0xd8b9, 0xd5b1, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_RCLIK, 0x403, 13, 0
+0xa3b1, 0xe6b4, 0xb1b5, 0xb0c7, 0xb0b4, 0xdabf, "\000" 
+    IDC_RCLIK, 0x403, 11, 0
+0xa3b1, 0xe6b4, 0xaace, 0x5448, 0x4c4d, "\000" 
+    IDC_RCLIK, 0x403, 9, 0
+0xd4d7, 0xafb6, 0xa3b1, 0xe6b4, "\000" 
+    IDC_RCLIK, 0x403, 9, 0
+0xf8cb, 0xa8b6, 0xb0b4, 0xdabf, "\000" 
+    0
+END
+
+IDD_PROPPAGE_SAVE DLGINIT
+BEGIN
+    IDC_AUTOSAVE, 0x403, 25, 0
+0xa3b1, 0xe6b4, 0x6557, 0xd262, 0xc3b3, 0x28e6, 0x682e, 0x6d74, 0x202c, 
+0x682e, 0x6d74, 0x296c, "\000" 
+    IDC_AUTOSAVE, 0x403, 18, 0
+0xa3b1, 0xe6b4, 0x6557, 0xd262, 0xc3b3, 0x28e6, 0x6d2e, 0x7468, 0x0029, 
+
+    IDC_AUTOSAVE, 0x403, 13, 0
+0xa3b1, 0xe6b4, 0xadd4, 0xbcca, 0x5448, 0x4c4d, "\000" 
+    IDC_AUTOSAVE, 0x403, 13, 0
+0xecbf, 0xd9cb, 0xa3b1, 0xe6b4, 0xb3d2, 0xe6c3, "\000" 
+    IDC_AUTOSAVE, 0x403, 20, 0
+0xa3b1, 0xe6b4, 0x6557, 0xd262, 0xc3b3, 0x28e6, 0xf6bd, 0x5448, 0x4c4d, 
+0x0029, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\hotfavtools.bmp"
+IDB_BITMAP5             BITMAP  DISCARDABLE     "res\\status.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "res\\sysmenu.bmp"
+IDB_BITMAP7             BITMAP  DISCARDABLE     "res\\coolgo.bmp"
+IDB_BITMAP9             BITMAP  DISCARDABLE     "res\\refresh.bmp"
+IDB_BITMAP10            BITMAP  DISCARDABLE     "res\\proxy.bmp"
+IDB_BITMAP11            BITMAP  DISCARDABLE     "res\\titleicons.bmp"
+IDB_BITMAP13            BITMAP  DISCARDABLE     "res\\minitoolhot.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TRAY                ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_SECURE              ICON    DISCARDABLE     "res\\secure.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER_DRAG        CURSOR  DISCARDABLE     "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_MYIE                REGISTRY DISCARDABLE    "MyIE.rgs"
+IDR_MyIENSHandle        REGISTRY DISCARDABLE    "res\\MyIENSHandle.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "MyIE\n\nMyIE\n\n\nMyIE.Document\nMyIE Document"
+    IDR_MyIEYPE             "\nUntitled-\nMyIE\nMyIE Files (*.htm,*.html)\n.htm\nMyIE.Document\nMyIE Document"
+    IDS_UNTITLED            "空白"
+    IDS_CLOSE_ALL_CONF      "要关闭所有窗口吗?"
+    IDS_POPUP_CONF          "\r\n要加入窗口过滤器吗?"
+    IDS_FAIL_ADDR_BOOK      "无法启动地址簿."
+    IDS_FAIL_EMAIL          "无法启动邮件程序."
+    IDS_CLEAN_ALL           "是否要清除所有Internet临时文件吗?"
+    IDS_DEFAULT_WEB_PROXY   "http://bjv1.readworld.com/translate?url="
+    IDS_NO_PROXY            "你还没有设置过代理服务器."
+    IDS_PROXY_FAIL          "设置代理服务失败."
+    IDS_UTIL_FAIL           "无法启动外部工具."
+    IDS_TITLE_HIS           "历史"
+    IDS_TITLE_SEARCH        "搜索"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "MyIE"
+    AFX_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_PROCESS    " "
+    ID_INDICATOR_WINS       "000"
+    ID_INDICATOR_IP         "000.000.000.000"
+    ID_INDICATOR_BP         "0000B"
+    ID_INDICATOR_RES        "00M"
+    ID_INDICATOR_SECU       "      "
+    ID_INDICATOR_TOOLS      "-"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MYIENSHANDLE_DESC   "MyIENSHandle Class"
+    IDP_SOCKETS_INIT_FAILED "套接字失败."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPEN            "在窗口中打开文档."
+    ID_FILE_CLOSE           "关闭窗口."
+    ID_FILE_PRINT           "\n打印"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_CLOSEALL        "\n全部关闭"
+    ID_FILE_CLOSE_1         "\n关闭窗口"
+    ID_FILE_SAVEAS          "\n保存为"
+    ID_VIEW_STOP            "\n停止"
+    ID_VIEW_REFRESH         "\n刷新"
+    ID_FILE_WORKOFFLINE     "\n脱机"
+    ID_VIEW_FONTS_LARGEST   "选择最大字体."
+    ID_VIEW_FONTS_LARGE     "选择大字体."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            " "
+    ID_APP_EXIT             "退出."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            " \n复制"
+    ID_EDIT_CUT             " "
+    ID_EDIT_FIND            " \n查找"
+    ID_EDIT_PASTE           " "
+    ID_EDIT_SELECT_ALL      " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具条"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态条"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "最小化窗口"
+    AFX_IDS_SCMAXIMIZE      "最大化窗口"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "恢复窗口大小"
+    AFX_IDS_SCTASKLIST      "活动窗口列"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BACK                "后退"
+    IDS_FORWARD             "前进"
+    IDS_STOP                "停止"
+    IDS_REFRESH             "刷新"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILETYPES           "HTML Files|*.htm;*.html|All Files|*.*||"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_LINK_POPUP           " "
+    ID_MENU_BAR             " "
+    ID_SYSMENU_BAR          " "
+    ID_TOOLS_OPENALLLINKS   "打开所有链接"
+    ID_VIEW_REFRESHALL      "\n全部刷新"
+    ID_OPTIONS_NEWTAB       "\n当前页旁"
+    ID_VIEW_STOP_ALL        "\n全部停止"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_FONTS_MEDIUM    "选择中等字体."
+    ID_VIEW_FONTS_SMALL     "选择小字体."
+    ID_VIEW_FONTS_SMALLEST  "选择最小字体."
+    ID_GO_BACK              "\n后退"
+    ID_GO_FORWARD           "\n前进"
+    ID_GO_START_PAGE        "\n主页"
+    ID_FAVORITES_DROPDOWN   "\n收藏夹"
+    ID_FONT_DROPDOWN        "\n字体大小"
+    ID_ENCODE_DROPDOWN      "\n编码"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HOME                "主页"
+    IDS_SEARCH              "搜索"
+    IDS_FAVORITES           "收藏夹"
+    IDS_PRINT               "打印"
+    IDS_FONT                "字体"
+    IDS_ADDRESS             "地址"
+    ID_KEYWORD              "关键字"
+    IDS_MY_COMPUTER         "我的电脑"
+    IDS_SET_DEFAULT         "是否要设为缺省浏览器?\n\n是, 设为缺省浏览器.\n否, 恢复上一次设置."
+    IDS_TITLE_FAVORITE      "收藏夹"
+    IDS_FAV_ADD             "添加"
+    IDS_FAV_ORG             "整理"
+    IDS_CHANNEL_E           "Channels"
+    IDS_OPEN_ALL_FAV        "打开本层链接"
+    IDS_NEW_WINDOW          "新建"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLS_EMAIL          "\n邮件"
+    ID_TOOLS_ALL            "\n清除历史"
+    ID_OPTIONS_USE_PROXY    "\n使用代理服务器"
+    ID_OPTIONS_SET_PROXY    "\n代理设置"
+    ID_OPTIONS_USE_WEBP     "\n使用 &Web 代理/翻译"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WEEKS_AGO           " 星期前"
+    IDS_SUNDAY              "星期日"
+    IDS_MONDAY              "星期一"
+    IDS_TUESDAY             "星期二"
+    IDS_WEDNESDAY           "星期三"
+    IDS_THURSDAY            "星期四"
+    IDS_FRIDAY              "星期五"
+    IDS_SATURDAY            "星期六"
+    IDS_TODAY               "今天"
+    IDS_LAST_WEEK           "上星期"
+    IDS_USE_PROXY           "使用代理服务器"
+    IDS_LINKS               "链接 "
+    IDS_UNSET_START_FOLDER  "取消启动组"
+    IDS_VTILE               "垂直平铺"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_HIS             "\n历史"
+    ID_VIEW_EXPLOREBAR_SEARCH "\n搜索"
+    ID_VIEW_FULLSCREEN      "\n全屏"
+    ID_FAV_POPUP            " "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_BMODE_DROPDOWN       "\n浏览模式"
+    ID_OPTIONS_MYIEOPTIONS  "\nMyIE 选项"
+    ID_OPTIONS_LOADIMAGE    "\n下载图片"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_IMAGE               "图象"
+    IDS_SP_INVALID          "无效"
+    IDS_SP_SLOWER           "慢速"
+    IDS_SP_SLOW             "较慢"
+    IDS_SP_NOR              "一般"
+    IDS_SP_FAST             "快速"
+    IDS_SP_FASTER           "很快"
+    IDS_OPEN_ALL_MOSTFAV    "打开本层最爱链接"
+    IDS_FAV_MOST            "最爱"
+    IDS_ALIAS               "缩写"
+    IDS_SEPARATOR           "分隔符"
+    IDS_CANT_DO             "不能还原或最小化窗口因为有窗口处于保护状态。"
+    IDS_EX_TOOL             "工具"
+    IDS_TITLE_SHELL         "文件"
+    IDS_TITLE_RESOURCE      "资源"
+    IDS_ROWSE_MODE          "浏览模式"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_RESTOR        "\n还原"
+    ID_WINDOW_MIN           "\n最小化"
+    ID_FILE_OPENF           "\n打开"
+    IDS_PASSWORD_ERROR      "口令错误."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_TILE_HORZ     "\n水平平铺"
+    ID_WINDOW_TILE_VERT     "\n垂直平铺"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HTILE               "水平平铺"
+    IDS_WEB_PROXY           "Web代理"
+    IDS_PROXY               "代理"
+    IDS_ENCODE              "编码"
+    IDS_UNSET_MOST_FAV      "取消最爱网页"
+    IDS_NOT_URL             "这不是一个URL, 不能做为最爱网页。"
+    IDS_UNSET_MOST_FOLDER   "取消最爱目录"
+    IDS_CONFIRM_DEL         "确实要删除这个快捷组吗?"
+    IDS_PROXY_ADDED         "代理服务器已成功加入！"
+    IDS_RESUME              "要继续上次错误时所浏览的页面吗？"
+    IDS_IMPORT_PROXY        "是否要在导入新代理前清除已有的代理服务器？"
+    IDS_COMFIRM_CATE_DEL    "确实要删除这个代理组吗？"
+    IDS_CANT_MOVE_PROXY     "代理的种类不同，不能移动这个代理。"
+    IDS_DEFAULT_WEBP_NAME   "看世界(英译中)"
+    IDS_INVALIDSEARCHNAME   "名称中不能使用空格。"
+    IDS_NEEDKEYSTRING       "搜索引擎中必须使用 %s 表示要搜索的关键字。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TAB_PRE              "\n上一窗口"
+    ID_TAB_NEXT             "\n下一窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_EDIT            "\n编辑"
+    ID_MENUITEM32961        "\n停止"
+    ID_FILE_STOP_OPENALL    "\n停止开窗"
+    ID_VIEW_FOLDER          "\n文件"
+    ID_OPTIONS_OPENLINKINNEWWINDOW "\n在新窗口中打开页面中的链接"
+    ID_VIEW_EXPLOREBAR_RESOURCE "\n用户资源"
+    ID_TOOLS_AUTOSCROLL_USEAUTOSCROLLING "\n自动滚屏"
+    ID_EDIT_UNDOCLOSE       "\n撤消关闭窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_AUTO_SCROLL         "滚屏"
+    IDS_SAVE_AS             "保存为"
+    IDS_AUTOFILTER          "自动过滤"
+    IDS_ADDFAV              "加入连接到当前目录..."
+    IDS_PAGE_SAVED          "该页已保存到"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UNDO_CLOSE          "撤消"
+    ID_NEWWINDOW            "\n打开新窗口"
+    ID_TOOLS_SETBG          "\n设背景色"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TOOLS_AUTOFILTER_CUR "\n当前窗口使用自动过滤"
+    ID_TOOLS_COLLECT        "\n简易收集面版"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SAVEDFORM           "表单数据已保存。"
+    IDS_MYIESHEET           "MyIE 选项"
+    IDS_DEFAULTPOS          "[Settings]\r\nband0=32869\r\nbandrc0=AAAAAAAAAAAAAAAAIBCAAAAACBAAAAAA\r\nband1=32870\r\nbandrc1=KBCAAAAAAAAAAAAALKCAAAAACBAAAAAA\r\nband2=59392\r\nbandrc2=AAAAAAAAEBAAAAAAKHCAAAAAKCAAAAAA\r\nband3=32959\r\nbandrc3=MHCAAAAAEBAAAAAALKCAAAAAKCAAAAAA\r\nband4=32781\r\nbandrc4=AAAAAAAAMCAAAAAALKCAAAAADEAAAAAA\r\nband5=32953\r\nbandrc5=AAAAAAAAFEAAAAAALKCAAAAALFAAAAAA\r\nband6=32866\r\nbandrc6=AAAAAAAANFAAAAAAJCAAAAAADHAAAAAA\r\nband7=0\r\nbandrc7=AAAAAAAAJMAAAAAAGPCAAAAAPNAAAAAA\r\nband8=0\r\n\r\n[Bands]\r\nband0=1\r\nband1=1\r\nband2=1\r\nband3=1\r\nband4=1\r\nbandb0=1\r\nStatus=1\r\nband5=0\r\nband6=1\r\nband7=1\r\n\r\n[ToolBar]\r\nB0=0\r\nB1=1B2=2\r\nB3=3\r\nB4=4\r\nB5=5\r\nB6=6\r\nB7=1\r\nB8=8\r\nB9=9\r\nB10=10\r\nB11=11\r\nB12=12\r\nB13=1\r\nB14=19\r\nB15=24\r\nB16=23\r\nB17=1\r\nB18=32\r\nB19=28\r\nB20=34\r\nB21=-1"
+    IDS_SAVEIMAGEFAIL       "无法保存图片，可能目录不存在。"
+    IDS_FILTERSHEET         "编辑过滤器(所有窗口)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_ACTIVENEWWINDOW "\n激活新窗口"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_GROUP                "\n快捷组"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_PRINTPREVIEW    "\n打印预览"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\icons.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\treelist.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\icon1.ico"
+IDR_MyIEYPE             ICON    DISCARDABLE     "res\\idr_myie.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MyIE.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,2,0,475
+ PRODUCTVERSION 3,2,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MyIE Web Browser\0"
+            VALUE "FileVersion", "3, 2, 0, 475\0"
+            VALUE "InternalName", "MyIE\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MyIE.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MyIE Web Browser\0"
+            VALUE "ProductVersion", "3, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MyIE.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

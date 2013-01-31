@@ -1,0 +1,38 @@
+
+	// MyIE.idl : IDL source for MyIE.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (MyIE.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(25E81C73-A6C1-46B2-A83B-C05565643062),
+		helpstring("IMyIENSHandle Interface"),
+		pointer_default(unique)
+	]
+	interface IMyIENSHandle : IUnknown
+	{
+	};
+[
+	uuid(133F1EF9-AE92-4C44-AE6B-DE5B0701E59B),
+	version(1.0),
+	helpstring("MyIE 1.0 Type Library")
+]
+library MyIELib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	
+	[
+		uuid(B96C53BD-FADC-45C7-A72D-EB5230433A46),
+		helpstring("MyIENSHandle Class")
+	]
+	coclass MyIENSHandle
+	{
+		[default] interface IMyIENSHandle;
+	};
+};
+
+	

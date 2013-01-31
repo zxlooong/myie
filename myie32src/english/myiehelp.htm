@@ -1,0 +1,225 @@
+<html>
+
+<head>
+<title>MyIE Web Browser User's Guide</title>
+</head>
+<Style type=text/css>
+    body {BACKGROUND-COLOR: #ffffff;  
+		MARGIN-top: 0px;
+		MARGIN-left: 0px;
+		font-size: 9pt;	  
+}
+#floater {
+	position: absolute;
+	left: 5;
+	top: 75;
+	width: 125;
+	visibility: visible;
+	z-index: 10;
+}
+</STYLE>
+
+<body vlink="#AA4400" link=#449900 background="myie.gif">
+<table border=1 bordercolorlight="#FFFFCC" bordercolordark="#EEEEEE" cellspacing="0" cellpadding=8 width =100%>
+<tr>
+<td colspan=2 bgcolor="#FFFFCC">
+<p align="center"><font color="#0000ee"><font size="6"><b>MyIE(网际畅游) 3.2  
+User's Guide</b></font></font></p> <p>
+</td></tr>
+<tr>
+<td bgcolor="#FFFFCC" valign="top" width=125>
+
+<script language="JavaScript">                                
+	self.onError=null;                                
+	currentX = currentY = 0;                                  
+	whichIt = null;                                           
+	lastScrollX = 0; lastScrollY = 0;                                
+	NS = (document.layers) ? 1 : 0;                                
+	IE = (document.all) ? 1: 0;                                
+	<!-- STALKER CODE -->                                
+	function heartBeat() {                                
+		if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }                                
+	    if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }                                
+		if(diffY != lastScrollY) {                                
+	                percent = .25 * (diffY - lastScrollY);                                
+	                if(percent > 0) percent = Math.ceil(percent);                                
+	                else percent = Math.floor(percent);
+			sy = document.all.floater.style.pixelTop + percent;                                 
+			if(sy<75)
+			{ lastScrollY=70; percent=0; sy=75;}
+			if(IE) document.all.floater.style.pixelTop = sy;
+	                lastScrollY = lastScrollY + percent;                                
+        
+	    }                                
+                                
+	}                                
+
+	if(NS || IE) action = window.setInterval("heartBeat()",1);                                
+	</script>                                
+
+<div id="floater" >                                 
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#gs">Overview</a></font><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#os">Requirement</a></font><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#ins">Installation</a></font><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#gn"><nobr>Features</nobr></a></font><br>
+<font size=2>&nbsp; &#149;<a href="#gn1"> Browse</a></font><br>
+<font size=2>&nbsp; &#149;<a href="#gn2"> Windows</a></font><br>
+<font size=2>&nbsp; &#149;<a href="#gn3"> Proxy</a></font><br>
+<font size=2>&nbsp; &#149;<a href="#gn6"> Shortcut</a></font><br>
+<font size=2><nobr>&nbsp; &#149;<a href="#gn4"> Favorites</nobr></a></font><br>
+<font size=2>&nbsp; &#149;<a href="#gn5"> Enhancements</a></font><br><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#jy">Your Suggestion</a></font><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#faq">FAQ</a></font><br>
+<font size=-2 color=#EE9900>&#004;</font><font size=3><a href="#upd">Upgrade</a></font><br>
+</div>   
+
+</td>
+<td>
+
+<font size="5" color="#000080"><a name="gs"><b>Overview</b></a></font>
+      <p>&nbsp;&nbsp;&nbsp; MyIE is a browser based on IE core(need IE5.0, IE5.5 or IE 6.0), it can open more web pages in one MyIE but only occupy a little resource.</p>
+      <p>&nbsp;&nbsp;&nbsp; MyIE is a freeware, you can use for free and distribute it as you like.<p>
+ 
+<font size="5" color="#000080"><a name="os"><b>Requirement</b></a></font>
+      <p>&nbsp;&nbsp;&nbsp; Supports Win9x/Win NT/Win2000/Win XP.<p>
+
+<font size="5" color="#000080"><a name="ins"><b>Installation</b></a></font>
+      <p>&nbsp;&nbsp;&nbsp; MyIE is a green software, no ad bars, needn't installing, just extract to folder then run.<p>
+
+<font size="5" color="#000080"><a name="gn"><b>Features</b></a></font>
+ <h4><a name="gn1"> Browse:</a></h4>
+    <ol>
+        <li>Multi-Windows Browse: you can open one more pages in MyIE when browsing, it can save resouces on your system.</li><p>
+        <li>Tab bar: When you open more than one pages, each window has a tab on tab bar. You can switch pages by change tab. Tab bar position can be at top or bottom, you can change it in MyIE options dialog box.
+		<br> Tips:Use Ctrl-Tab to switch pages。 
+		<p>Tab bar has three styles: One line, Multiple lines, and Auto Fit. Auto Fit tab will adjust its width according to tab count, it can keep more tabs in one line.</li><p>
+ 	<li>Iconic progress: when browsing each tab has an icon besides it to display the progress of it. When icon is blank means process is between 0%-25%, a quarter blue means progress is between 25%-50%, and so on. When icon disappear means the page is finishing downloading. Read icon means you haven't read it.</li><p>
+        <li>Close popup windows: You can add those pages into Popup Filter, so that those windows won't be opened again. You also can add the URLs of some Frames and IFrames into Popup Filter, so that those frames and IFrames won't be downloaded.
+		</li><p>
+	<li>Use * to filter windows: You can use * in URLs to filter similar URLs. </li><p>
+        <li>Use auto filter: Auto filter can forbid all popup windows automatically without add URLs in popup filter. You also can enable/disable this feature for each window independently. </li><p> 
+        <li>Filter duplicates windows: MyIE can filter duplicated popup windows to avoid wasting resouce. </li><p> 
+	<li> Content Filter. It can filter out advertisement images from web pages to speed up the downloading. You can select Enable content filter in Tools Menu and set the URLs to be filtered in Edit Filters. </li><p>
+	<li>Download Control: You can set whether downloading images, sounds, running script, applets, activeX on each page.</li><p>
+	<li>Save web pages: MyIE can save the whole web page or only save HTML of the page.</li><p>
+	<li>Quick save: quick save can save page with images quickly, but the default IE save funtion will display a process dialog and need more time to save it.</li><p>
+	<li>Auto Save: it like save functions, but page will be save to default directory automatically without save as dialog box. Auto save has four options: save whole page as html, as whole page as mht, only save html, quick save. You can select default Auto Save function in MyIE options. You also can select to categorize pages by site, then pages will be saved to subdirectory named by site name. </li><p>
+	<li>Domian completion: When input URL, you can use Ctrl+Enter, Shift+Enter, Ctrl+Shift+Enter to help you complete its domian. it will add http://www. and corresponding suffix such as: .com, .net, .com.cn. You can set them in MyIE options dialog.</li><p>
+	<li>Don't display Error messages: You can select this option in MyIE options dialog box to prevent browser display Script Error Messages.</li><p>
+	<li>Browse Local Files: You can select Folder bar to dispaly a window like File Manager, then you can select files to display in browser windows. You also can change the file type and click refresh button to refresh files. If you want to disable this feature you can add Secure=1 in configure file MyIE.ini.</li><p>
+	<li>User resource: Select user resource in toolbar to display the resource bar, it contains web emails, stocks and other user resources. The content is in resource.htm, you can edit it to add your own resources.</li><p>
+	<li>Auto Scrolling: Auto scrolling will scroll the page automatically to help you to read long files, it fit for none frame pages. </li><p>
+	<li>Control scrolling speed by mouse. You can select use mouse to control scrolling speed in auto scrolling menu. Then put the mouse on scrollbar, the speed will be decided by the position of mouse. When mouse leaves scrollbar the scrolling will stop.</li><p>
+	<li>Brower Mode: it is a set of MyIE settings, currently it has defined three modes: user mode, standard mode, news mode. </li><p> 
+	<li>Set background color: you can set the background color of page to help you read long articles.</li><p>
+	<li>Set background color for all windows: it will set all opened window to default color.</li><p>
+	<li>Auto Set background color: it will set default page background color when you finish downloading a page. </li><p>
+	<li>Send: You can send page or link by email to your friends. </li><p>
+	<li>Animation Icon: When MyIE is downloading, the icon of MyIE will be animated. </li><p>
+	<li>Support download tools: You can select download tools in MyIE option dialog, currently MyIE builds in supporting for NetAnts and FlashGet. </li><p>
+	<li>Mouse Gestures: You can press and hold right mouse button in page's blank and move it to perfrom some functions.<br>
+	Down: 				Open New Window<br>
+	Left: 				Back<br>
+	Right: 				Forward<br>
+	Up then Down: 			Refresh<br>
+	Right-Left-Right or Down-Right:	Close window<br>
+	Up Right: 	Switch to next window<br>
+	Up Left:	Switch to previous window</li><p>
+ </ol>
+<h4><a name="gn2">Windows:</a></h4>
+  <ol>
+	<li>Activate new window: you can select activate new window so that when opening a new window it will be the active forground window, otherwise the new window will be opened in background. It's more fit for browsing news. </li><p>
+	<li>Open new window: You can select open new widnows when input new address, click favorites, history, local files and links in pages.</li><p>
+	<li>Multiple Window browsing: windows can be tiled, cascaded. </li><p>
+	<li>Create new window: MyIE has 4 options to open new window: blank, homepage, current window, addess in clipboard. You can select default action in MyIE options dialog.</li><p>
+	<li>Lock window: Right click on tab, you can select lock this tab in its menu. When a window is locked it won't be closed when close all windows and all links in it will opened in new windows. </li><p>
+	<li>Close all windows: close all unlocked windows.</li><p>
+	<li>Full screen: Use F11 to display MyIE in Full Screen mode.</li><p>
+	<li>Open pages in new windows: If you haven't select open new window selection, you can hold Ctrl key when click Favorites, histories to open them in new windows.</li><p>
+	<li>Switch windows: you can use Ctrl+ <- and Ctrl+ -> , or F2, F3 to switch window sequently.  F2 = Ctrl &lt;-, F3 = Ctrl -&gt;, Ctrl-1...Ctrl-9,Ctrl-0 represent window 1 to 10.    </li><p>
+	<li>Set stick name: If a tab is set a stick name, then it won't changed when windows' title change.</li><p>
+	<li>Protect windows: a protect window has a password set, to access a protect window you need the password.</li><p>
+	<li>Hide MyIE：Use Alt+` to hide and unhide MyIE.</li><p>
+	<li>Drag link to address bar: you can drag a link to address to open it in new a window.</li><p>
+	<li>Drag link to tab: you can drag a link to a tab to open it in the corresponding window.</li><p>
+	<li>Double Click and Middle Click tab: you can select the fucntion for double click and middle click in MyIE option. Currently you can select close window, save as, save html, and auto save.</li><p>
+        <li>Auto refresh windows: you can set a frequence to refresh an inactive window. </li> <p>  
+        <li>Undo close: it can reopen the windows you last closed. </li> <p>  
+        <li>Drag links to open in new widnows: you can drag a link in page and release in the page, then the link can be opened in a new window. </li> <p>
+  	<li>Drag tab: you can use lefe mouse button to drag the tabs to arrange the tab sequence.
+</li><p>
+  </ol>
+<h4><a name="gn3">Proxy:</a></h4>
+<ol>
+	<li>Use proxy server: you can use proxy with MyIE, proxy can be set in Menu Options/Quick set proxies. Also there is a toolbar button for you to use proxy more easily. The proxy setting will be affected for all windows. </li><p>
+	<li>Use Web Proxy: Currently a lot of web site provide proxy functions such as www.safeweb.com. You can set web proxy for each window separately. When you enable a web proxy for a window, the URLs you open in that window will surf through that web proxy. </li><p>
+	<li>Set proxies: Use Menu Options/Quick set proxies to add, modify, delete and categorize proxies. The format of proxy is URL:Port, such as 202.96.233.13:3128. Web proxy is a just a URL, you can use %s and %S to represent the Web page you will browse, otherwise web page will be added at the end. </li><p>
+	<li>Bypass URL: You can set bypass URL for each category. Each address should be separated by a blank space. </li><p>    
+	<li>Import/Export proxies: You can Export proxies for other programs using or Import from others. </li><p>
+</ol> 
+<h4><a name="gn6">Shortcuts:</a></h4>
+<ol>
+	<li>Start Folder: You can set a start folder in Favorites, start folder will be displayed in bold font. It can be used in MyIE startup mode to open all links in that folder when start MyIE.</li><p>
+	<li>URL Alias: You needn't to input a complete URL just input an alias of that URL, MyIE can translate it into a real URL. You should set the aliases first. </li><p>
+	<li>URL shortcut: You can define a URL to a Shortcut key. Now you can use F2-F12 as URL shortcuts. </li><p>
+	<li>Groups: It's compatible with Netcaptor's Groups. You can copy Netcaptor's *.cgp files to MyIE's groups folder. Double click a URL in group can open it.</li><p> 
+	<li>Save as group: save all opened windows' URL as a new group. </li><p>
+	<li>Fill Forms: Use Alt-Q to fill current form, but you should use Alt-1 to save a sample of that form first. You also can Alt-2 to save form as a general form. When filling form and MyIE can't find corresponding samples it will use the data in general form. This function isn't suitable for shared computers.</li><p>
+	<li>Quick search: You can input eyahoo keyword to search that keyword by yahoo.  Use Set Quick Search dialog to set those search engines. </li><p>
+	<li>Status bar buttons: There are four buttons on status bar, they are work offline, auto filter, activate new window, simple collector. </li><p>    
+	<li>Simple collector: it can store text you drop on it and save images to default image folder. You also can drop them on status bar buttons. </li><p>    
+</ol>
+<h4><a name="gn4">Favorites:</a></h4>
+<ol>
+	<li>Open all favorites: in each favorite menu there is a open all links item, you can use it to open all links in that folder. </li><p>
+	<li>Most Favorite links: you can mark a link as your most favorite in favorite bar, those links will have a red icon. </li><p>
+	<li>Most Favorite Folders: you can mark a favorite folder as most favorite. </li><p>
+	<li>Open Most favorites: in each favorite menu there is a open most favorite links item, you can use it to open most favorite links in that folder.</li><p>
+	<li>Use single column Menu: by default MyIE display favorites in multiple columns, but if you have many favorites it may not be displayed on your screen, so you can select using single column menu. </li><p>
+	<li>Favorite bar: All favorite folders can be displayed on a toolbar, you can select them easily. </li><p>
+	<li>Add Link Here: In Favoriate Menu I add a new item: Add link here. You can add current window's addrress to that favoriate folder directly.</li><p>
+</ol>
+<h4><a name="gn5">Enhancements:</a></h4>
+<ol>
+        <li>Search engines: MyIE include more than 100 search engines. You can use them in Search bar. </li><p>
+        <li>External Utilities: You can add some external utilities into MyIE by External Utitly manager. Those Utitlies will be displayed in its toolbar, so that you can use them more conveniently. Those utilites also can be set as start with MyIE, those utilities will be started when Myie starts and closed when MyIE exits. </li><p>
+        <li>Clear history: You can clear the histories in MyIE ( such as Cookies，Caches and history).</li><p>
+	<li>Startup modes: MyIE has six startup modes: open blank window, open homepage, resume last visited pages, open start folder, open most favorites in start folder, open start group. </li><p>
+	<li>Display local IP: MyIE can display you IP address on status bar. </li><p>
+	<li>Toolbar background: You can use a BMP picture on MyIE's toolbars to make it likes nice. Copy BMP's to MyIE's myieskin folder then you can select them at Tools/skin menu. </li><p>
+	<li>System Resources: On Win98 MyIE can display reource percent on status bar.</li><p>
+	<li>Free Memories: On WinNT and Win2000 MyIE will display the amount of free memories.</li>
+	<li>Modem speed: On Win98 MyIE can display current Modem downloading speed. </li><p>
+	<li>Minimize to system tray: In MyIE options you can select to minimize MyIE to system tray. </li><p>
+	<li>Disable scroll text in Statusbar. </li><p>
+	<li>Links list: you can list all links in current page, also you can filter those links by their URLs. </li><p>
+	<li>Lock homepage: it can prevent some web pages to change your homepage, you only can change homepage through MyIe's Internet Option.
+</li><p>
+     </ol>
+
+<font size="5" color="#000080"><a name="jy"><b>Your suggestion:</b></a></font>
+	<p>&nbsp;&nbsp;&nbsp; If you have any suggestions please EMail to
+      <a href="mailto:myie@gmx.net">myie@gmx.net</a><p>
+
+<font size="5" color="#000080"><a name="faq"><b>FAQ:</b></a></font>
+	<p>&nbsp;&nbsp;&nbsp; Q.<b>Menu bar disappeared.</b><br>
+      &nbsp;&nbsp;&nbsp; A.Can use shortcut Ctrl-F11 to callback the menu bar. 
+
+	<p>&nbsp;&nbsp;&nbsp; Q.<b>Why the download tools which can work with MyIE 3.0 can't work now?</b><br>
+      &nbsp;&nbsp;&nbsp; A.Because some tools use the same technology as MyIE's Content Filter, but they can't work together. So if you want use those tools please disable content filter.
+ 
+
+<p>
+<font size="5" color="#000080"><a name="upd"><b>Upgrade:</b></a></font>
+      <p>&nbsp;&nbsp;&nbsp; You can visit my homepage<a href="http://changyou.mainpage.net">http://changyou.mainpage.net</a> to find out the lastest version of MyIE. &nbsp; 
+	<p>&nbsp;&nbsp;&nbsp; 
+
+<p align=right>&#151; 畅游(changyou)，青晨.</p> 
+
+
+</tr>
+</table>
+
+</body>
+
+</html>

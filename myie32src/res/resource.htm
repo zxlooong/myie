@@ -1,0 +1,403 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=gb2312">
+   <TITLE>Resource</TITLE>
+   <Style type=text/css>
+    body {BACKGROUND-COLOR: #ffffff;
+		MARGIN-top: 0px;
+		MARGIN-left: 0px;
+}
+</Style>
+<SCRIPT language="JavaScript">
+//set cookie
+function GetCookie(sName)
+{
+  // cookies are separated by semicolons
+  var aCookie = document.cookie.split(";");
+  for (var i=0; i < aCookie.length; i++)
+  {
+    // a name/value pair (a crumb) is separated by an equal sign
+    var aCrumb = aCookie[i].split("=");aCrumb[0]=trim(aCrumb[0]);
+    if (sName == aCrumb[0]) 
+      return unescape(aCrumb[1]);
+  }
+
+  // a cookie with the requested name does not exist
+  return null;
+}
+function SetCookie(sName, sValue)
+{
+  document.cookie = sName + "=" + escape(sValue) + ";expires=Mon, 31 Dec 2100 23:59:59 UTC;";
+}
+
+aSearch = GetCookie("myieresource");
+if(aSearch!=null)
+	aSearch = aSearch.split(',');
+
+function savesearch()
+{
+ var strsearch="";
+ for (var i=0; i<se.length; i++)
+  if (se[i].checked)
+	strsearch += "1,";
+  else
+	strsearch += "0,";
+  SetCookie("myieresource", strsearch);
+}
+
+//end cookies
+
+
+	function onselall(s, bsel)
+	{
+	for (var i=s+1; i<se.length && se[i].url!=''; i++)
+	 {
+	  se[i].checked = bsel;
+	  eval('document.searchtable.w'+i+'.checked = ' + bsel + ';');
+	  }
+
+	}
+
+	function SearchEngine(name, url, checked, parameter1, parameter2)
+	{this.name = name;
+	 this.url = url;
+	 this.checked = checked;
+	 this.p1 = parameter1;
+	 this.p2 = parameter2;
+	}
+
+	function SearchEngineArray()
+	{with(SearchEngineArray)
+	 {this.length = arguments.length / 5;
+	  var j = 0;
+	  for (var i = 0; i < this.length; i++)
+	   {this[i] = new SearchEngine(arguments[j+1], arguments[j],
+	    arguments[j+2], arguments[j+3], arguments[j+4]);
+	    if(aSearch!=null && i<aSearch.length)
+		if(aSearch[i]==1)
+			this[i].checked = true;
+		else
+			this[i].checked = false;
+	    j += 5;
+	   }
+	 }
+	}
+
+	var se = new SearchEngineArray(
+
+		"", "邮箱社区", false, "", "",
+		"http://webmail.21cn.com/", "@21cn.com", false, "spc", "http://webmail.21cn.com/NULL/NULL/NULL/NULL/NULL/SignIn.gen",
+		"http://mail1.citiz.net/", "@citiz.net", false, "spc", "http://mail.citiz.net/cgi-bin/login",
+		"http://ccpi.gov.cn","@ccpi",false,"spc","http://61.139.79.18/cgi-bin/mail/wsqmail.php3",
+		"http://bbs.ccpi.gov.cn","ccpi社区",false,"spc","http://bbs.ccpi.gov.cn/cgi-bin/useradd/password.pl",
+		"http://freemail.163.com/","@163.com",false,"spc","http://reg.163.com/php/new/in.php?url=/php/new/entermail.php",
+		"http://reg.163.com/php/new/userlogin.php","网易通行证",false,"spc","http://reg.163.com/php/new/in.php",
+		"http://www.163.net/","@163.Net",false,"spc","http://bjweb.163.net/cgi/login",
+		"http://members.sina.com.cn/apply/","@sina.com",false,"spc","http://mail.sina.com.cn/cgi-bin/login.cgi",
+		"http://freemail.263.net/", "@263.net", false, "spc", "http://freemail.263.net/cgi/login",
+	//--Add more mail url here---
+
+		"", "网页翻译", false, "", "",
+		"http://www.readworld.com/","英译中",false,"http://www.readworld.com/?url=","",
+		"http://www.ccsee.com/trans/cn/trans.asp?url=","日译中",false,"http://www.ccsee.com/trans/cn/trans.asp?url=","",
+
+		"", "软件搜索", false, "", "",
+		"http://www.mydown.com/", "电脑报", false, "http://www.mydown.com/cgi-bin/Search/search.cgi?query=","",
+		"http://www.joyo.com/", "金山卓越", false, "http://www.joyo.com/soft/dlsearch.asp?uid=38015559209028015055033&id=", "",
+		"http://www.download.com.cn/", "中国下载", false, "http://www.download.com.cn/show.phtml?action=search&sk=", "",
+		"http://www.dreamer.com.cn/", "梦想家", false,  "http://engine.dreamer.com.cn/index.cgi?kword=", "&type=10",
+		"http://www.newhua.com/", "华军软件园", false, "http://www.picosearch.com/cgi-bin/ts.pl?index=52385&query=", "",
+		"http://zhangjia.yeah.net/", "张迦天地", false, "http://www.picosearch.com/cgi-bin/ts.pl?index=22208&query=", "",
+		"http://asp.cnshare.com/", "中国共享", false, "http://asp.cnshare.com/coco/cnshare/searchsoft.asp?keywords=", "",
+		"http://software.tiandown.com/", "天下网", false, "http://software.tiandown.com/search.asp?search=", "",
+		"http://www.computerinfo.com.cn/", "齐鲁热线", false, "http://www.computerinfo.com.cn/computer/softqueryall.asp?rjmc=", "&submit=",
+		"http://soft.zz.ha.cn/", "软件任我行", false, "http://soft.zz.ha.cn/query/query.asp?kword=", "",
+
+		"", "驱动程序", false, "", "",
+		"http://www.mydrivers.com/", "驱动之家", false, "http://www.mydrivers.com/scripts/search.dll?item=", "",
+		"http://www.picosearch.com/","驱动世界",false,"spc","http://www.picosearch.com/cgi-bin/ts.pl",
+
+		"", "&nbsp;&nbsp;技术类", false, "", "",
+		"http://www.byte.com/", "Byte", false, "http://www.byte.com/search?queryText=", "&SEARCH-97=Search",
+		"http://search.hotwired.com/", "Wired", false, "http://search.hotwired.com/search97/s97.vts?Action=FilterSearch&Filter=docs_filter.hts&ResultTemplate=news.hts&Collection=news&QueryMode=Internet&Query=", "",
+		"http://www-tech.mit.edu/", "Tech.mit", false, "http://www-tech.mit.edu/cgi-bin/htsearch?restrict=%2FV105%2F&restrict=%2FV109%2F&restrict=%2FV110%2F&restrict=%2FV111%2F&restrict=%2FV112%2F&restrict=%2FV113%2F&restrict=%2FV114%2F&restrict=%2FV115%2F&restrict=%2FV116%2F&restrict=%2FV117%2F&restrict=%2FV118%2F&restrict=%2FV119%2F&method=and&format=builtin-long&config=htdig&exclude=&words=", "",
+		"http://search.microsoft.com/", "MSDN", false, "http://search.microsoft.com/us/dev/default.asp?qu=", "&boolean=ALL&nq=NEW&so=RECCNT&p=1&chkM=on&radM=2&chkS=on&radS=2&chkA=on&radA=2&chkP=on&radP=2&chkK=on",
+		"http://itsearch.ccidnet.com/", "赛迪搜索", false, "http://itsearch.ccidnet.com/cgi-bin/engine/search?Stext=", "&Surlw=0",
+
+
+		"", "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP3", false, "", "",
+		"http://www.dreamer.com.cn/", "梦想家", false, "http://engine.dreamer.com.cn/index.cgi?kword=", "&type=5",
+		"http://mp3.stn.sh.cn/", "MP3之家", false, "http://mp3.stn.sh.cn/Mp3Home/Mp3Music/SongSearch.asp?KindNo=0&Singer=", "",
+		"http://geci.yesite.com/", "歌词理想国", false, "http://geci.yesite.com/cgi-bin/songs/search.cgi?query=", "",
+		"http://search.zhaodaola.com", "找到啦!", false, "http://search.zhaodaola.com/cgi-bin/search.exe?searchkey=","&cata=所有网站&radio1=1&R1=V5",
+		"http://www.100mp3.com/", "100MP3", false, "http://www.100mp3.com/mp3search.cgi?action=search&Keywords=", "",
+
+
+		"", "&nbsp;&nbsp;&nbsp;&nbsp;新闻", false, "", "",
+		"http://www.sina.com.cn/", "新浪新闻", false, "http://search.sina.com.cn/cgi-bin/news/searchnews.cgi?sk=", "",
+		"http://www.nease.net/", "网易新闻", false, "http://search.163.com/search/results/1,1602,0,00.html&category=&type=0&key=", "^",
+		"http://news1.gznet.com/", "广州视窗", false, "http://news1.gznet.com/search_engine.asp?keywords=", "&pg=0&newstype=",
+		"http://www.dreamer.com.cn/", "梦想家新闻", false, "http://engine.dreamer.com.cn/?kword=", "&type=4",
+		"http://www.sohu.com/", "搜狐新闻", false, "http://search.sohu.com/cgi-bin/search_news.cgi?txt_keyword=", "&page_index=0&catagory=news&B1=%D0%C2%CE%C5%CB%D1%CB%F7",
+
+
+		"", "股票行情", false, "", "",
+		"http://www.stockstar.com/", "实时行情", false, "http://quote01.stockstar.com/simplequote?code=", "",
+		"http://www.stockstar.com/", "实时曲线", false, "http://chartr1.stockstar.com/rtline?code=", "&now",
+		"http://www.stockstar.com/", "日K曲线", false, "http://chartd1.stockstar.com/dkline?code=", "&now",
+
+
+		"", "", false, "", ""
+	);
+    function trim(string)
+	{var str2="";
+	 for(var i=0;i<string.length;i++)
+	   if(string.charAt(i)!=" ")
+	     str2+=string.charAt(i);
+	  return str2;
+	 }
+
+	function Search()
+	{if (trim(document.searchtable.keyword.value)=="")
+	   return;
+	 savesearch();
+	 for (var i=0; i<se.length; i++)
+	  if (se[i].checked && se[i].p1 != "")
+	  {if (se[i].p1 != "spc")
+	      window.open(se[i].p1 + document.searchtable.keyword.value + se[i].p2 , 'w'+i);
+    	   else
+	     {with (document)
+		{searchbox.action = se[i].p2;
+//驱动世界
+searchbox.query.value = searchtable.keyword.value;
+//@ccpi.gov.cn
+searchbox.bruger.value = searchtable.keyword.value;
+searchbox.adgangskode.value = searchtable.Password.value;
+//@163.com
+searchbox.user.value = searchtable.keyword.value;
+searchbox.pass.value = searchtable.Password.value;
+//@sina.com
+searchbox.u.value = searchtable.keyword.value;
+searchbox.psw.value = searchtable.Password.value;
+//bbs.ccpi.gov.cn
+searchbox.username.value = searchtable.keyword.value;
+searchbox.userpassword.value = searchtable.Password.value;
+//@citiz.net
+searchbox.userid.value = searchtable.keyword.value;
+searchbox.password.value = searchtable.Password.value;
+//@21cn.com
+searchbox.LoginName.value = searchtable.keyword.value;
+searchbox.passwd.value = searchtable.Password.value;
+//----add more mail boxes here........
+
+		 searchbox.target = 'w'+i;
+		 searchbox.submit();
+		}
+	   }
+	  }
+	  //document.searchtable.keyword.value="";
+	}
+
+
+//====================================
+NS4 = (document.layers) ? 1 : 0;
+IE4 = (document.all) ? 1 : 0;
+ver4 = (NS4 || IE4) ? 1 : 0;
+
+function expandIt(el) {
+  if (!ver4) return;
+  if (IE4) {
+      whichEl = eval(el + "Child");
+      if (whichEl.style.display != "block") {
+          whichEl.style.display = "block";
+      }
+      else {
+          whichEl.style.display = "none";
+      }
+  }
+  else {
+      whichEl = eval("document." + el + "Child");
+      if (whichEl.visibility == "hide") {
+          whichEl.visibility = "show";
+      }
+      else {
+          whichEl.visibility = "hide";
+      }
+      arrange();
+  }
+}
+function expandIt2(whichEl) {
+  if (!ver4) return;
+  if (IE4) {
+      if (whichEl.style.display != "inline") {
+          whichEl.style.display = "inline";
+      }
+      else {
+          whichEl.style.display = "none";
+      }
+  }
+  else {
+      if (whichEl.visibility == "hide") {
+          whichEl.visibility = "show";
+      }
+      else {
+          whichEl.visibility = "hide";
+      }
+      arrange();
+  }
+}
+
+
+var sellist = new Array();
+
+function checkall()
+{
+	for(i=0; i<sellist.length; i++)
+		if(sellist[i])
+			eval('document.searchtable.selall'+i+'.checked=true');
+}
+</script>
+<style type="text/css">
+<!--
+td 	{  font-size: 9pt}
+.d 	{font-family: "宋体";font-size: 9pt;border: solid; border-width: 0px 0px 1px; border-color: #000000; color: #000000;background: #eeeeee; height: 20px; padding-top: 4px}
+.d0	{font-family: "宋体";font-size: 9pt;background-color: #FAFCEF; border: 1 solid #20663B}
+.d1 	{font-family: "宋体";font-size: 9pt;cursor: hand; color: #000000;background: #eeeeee; height: 20px; padding-top: 4px}
+.d3	{font-family: "宋体";font-size: 9pt;background-color: #FAFCEF; border: 2 solid #20663B}
+td.d2 	{font-family: "宋体";font-size: 9pt; background: #ffffff;color: #000000}
+a 	{font-family: "宋体";text-decoration: none; font-size: 9pt; color: #000000; cursor: hand; }
+a:hover	{font-family: "宋体";color: #FF0000; text-decoration: underline; font-size: 9pt; cursor: hand}
+input.i1{font-size: 9pt;}
+.child {display:none}
+-->
+</style>
+</head>
+
+<body onunload="savesearch()"  onload="checkall()">
+
+<table border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td class="d2">
+<form name="searchtable" onSubmit="Search(); return false;">
+&nbsp;&nbsp;关键词.Url.用户名<Br>
+&nbsp;&nbsp;<input type="text" size="22" class="d0" name="keyword" ><Br>
+&nbsp;&nbsp;<span onClick="expandIt2(paa1)" style="cursor:hand">密码:</span>
+&nbsp;&nbsp;<input id="paa1" style="display: none" type="password" name="Password" class="d0" size="14">
+<center><input type="submit" class="d3">
+
+<table border=0 cellpadding="0" cellspacing="0" cols="2" width="100%" >
+<TR><TD COLSPAN="2"><div></td>
+
+
+<script language="javascript">
+with (document)
+	{var tb=0, total=0, selected=0, cates=0, selalllist='';
+ 	 for (var i=0; i<se.length; i++)
+	  {if (se[i].url == ''&& se[i].name!='')
+	   {if (tb > 0)
+	   	write('</TR>');
+		write('</table></div><div align=left class="d"><span onClick="expandIt(\'category'+cates+'\')" class="d1">' + se[i].name + '</span>  <input TYPE="CHECKBOX" name="selall'+cates+'" onClick="onselall('+i+', document.searchtable.selall'+cates+'.checked' +')">全选</div>');
+		write('<div align=left id="category'+cates+'Child" class="child"><table border=0 cellpadding="0" cellspacing="0">')
+ 	        if(selected > 0 && total!=selected)
+		  expandIt('category'+(cates-1));
+		if(total == selected && cates>0)
+		  {
+			sellist[cates-1]=1;  
+		  }
+		else
+			sellist[cates-1]=0;
+		tb = 0;
+		total = 0;
+		selected = 0;
+		cates++;
+	    }
+	    else if (se[i].name!='')
+	    {
+	     tb++;
+	     if (tb==1)
+	     write('<TR>\n');
+	     write('<TD NOWRAP class="d2"><INPUT TYPE="CHECKBOX" ' + (se[i].checked?' CHECKED':'') + ' NAME="w' + i + '" onClick="se[' + i + '].checked = document.searchtable.w'+i+'.checked">' + 
+	     '<A HREF="' + se[i].url + '" TARGET="w' + i + '"><font size=-1>' + se[i].name + '</font></A></TD>');
+	     if (tb > 1)
+		{
+		 write('</TR>\n');
+		 tb = 0;
+		}
+	     if(se[i].checked)
+		selected++
+	     total++;
+	     }
+	  }
+	}
+
+        if(selected > 0)
+	  expandIt('category'+(cates-1));
+	if(total == selected && cates>0)
+		sellist[cates-1]=1;  
+	else
+		sellist[cates-1]=0;
+
+	if (top.NS)
+	 {document.searchbox.reset();
+          document.searchtable.reset();
+         }
+
+
+
+
+</script>
+</table>
+</form>
+</center>
+
+</tr></td>
+</table>
+<form name="searchbox" method=post >
+<!-----驱动世界------->
+<input type="hidden" name="query">
+<input type=hidden name="index" value="16381">
+<input type=hidden name="psel" value="all">
+<!----------@ccpi.gov.cn------------------------->
+<input type=hidden name=server value="mail.ccpi.gov.cn">
+<input type=hidden name=port value="110">
+<input type=hidden name="submit1" value="OK 发送">
+<input type="hidden" name="bruger" >
+<input type="hidden" name="adgangskode">
+<!------------@163.com----------------------->
+          <input type="hidden" name="user">
+          <input type="hidden" name="pass" >
+          <input type="hidden" name="email">
+          <input type="hidden" name="password">
+<!-----------@163.net------------------------>
+          <input type=hidden name="language" value="0">
+<!-----------------@sina.com------------------>
+          <input type="hidden" name="u">
+          <input type="hidden" name="psw">
+          <input type="hidden" name="l" value="http://mail.sina.com.cn/cgi-bin/mail.cgi">
+          <input type="hidden" name="product" value="mail">
+<!------------------ccpi----------------->
+<input type="hidden" name="p" value="2">
+<input  TYPE="hidden" name="username" size="12">
+<input TYPE="hidden" NAME="userpassword" size="12">
+<!------------------citiz----------------->
+	<input type="hidden" name=userid >
+  	<input type="hidden" name="usecookie" value="1">
+        <input type="hidden" name="option" value="1">
+<!------------------263----------------
+          <input name=pass type=hidden>
+          <input name=image2 type=hidden value=进入>->
+<!------------------21cn----------------->
+<input name="VTI-GROUP" type="hidden" value="0">
+<input name="LoginName" type="hidden">
+<input name="DomainName" type="hidden" value="21cn.com">
+<input name="passwd" type="hidden"> 
+<!----------------------------------->
+<!----------------------------------->
+<!----------------------------------->
+<!---------Add more mail forms here-------------------------->
+
+</form>
+
+
+
+</body>
+</html>

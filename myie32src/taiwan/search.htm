@@ -1,0 +1,496 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+   <TITLE>Search</TITLE>
+   <Style type=text/css>
+    body {BACKGROUND-COLOR: #ffffff;  
+		MARGIN-top: 0px;
+		MARGIN-left: 0px;	  
+}
+	  
+   </Style>	
+<SCRIPT language="JavaScript">
+//set cookie
+function GetCookie(sName)
+{
+  // cookies are separated by semicolons
+  var aCookie = document.cookie.split(";");
+  for (var i=0; i < aCookie.length; i++)
+  {
+    // a name/value pair (a crumb) is separated by an equal sign
+    var aCrumb = aCookie[i].split("=");aCrumb[0]=trim(aCrumb[0]);
+    if (sName == aCrumb[0]) 
+      return unescape(aCrumb[1]);
+  }
+
+  // a cookie with the requested name does not exist
+  return null;
+}
+function SetCookie(sName, sValue)
+{
+  document.cookie = sName + "=" + escape(sValue) + ";expires=Mon, 31 Dec 2100 23:59:59 UTC;";
+}
+
+aSearch = GetCookie("myiesearch");
+if(aSearch!=null)
+	aSearch = aSearch.split(',');
+
+function savesearch()
+{
+ var strsearch="";
+ for (var i=0; i<se.length; i++)
+  if (se[i].checked)
+	strsearch += "1,";
+  else
+	strsearch += "0,";
+  SetCookie("myiesearch", strsearch);
+}
+
+//end cookies
+
+
+	function onselall(s, bsel)
+	{
+	for (var i=s+1; i<se.length && se[i].url!=''; i++)
+	 {
+	  se[i].checked = bsel;
+	  eval('document.searchtable.w'+i+'.checked = ' + bsel + ';');
+	  }
+  
+	}
+
+	function SearchEngine(name, url, checked, parameter1, parameter2)
+	{this.name = name;
+	 this.url = url;
+	 this.checked = checked;
+	 this.p1 = parameter1;
+	 this.p2 = parameter2;
+	}
+
+	function SearchEngineArray() 
+	{with(SearchEngineArray)
+	 {this.length = arguments.length / 5;
+	  var j = 0;
+	  for (var i = 0; i < this.length; i++) 
+	   {this[i] = new SearchEngine(arguments[j+1], arguments[j], 
+	    arguments[j+2], arguments[j+3], arguments[j+4]);
+	    if(aSearch!=null && i<aSearch.length)
+		if(aSearch[i]==1)
+			this[i].checked = true;
+		else
+			this[i].checked = false;
+	    j += 5;
+	   }
+	 }
+	}
+
+	var se = new SearchEngineArray(
+		"", "繁體中文搜索站點", false, "", "",
+		"http://chinese.yahoo.com/", "繁體中文Yahoo", false, "http://search.chinese.yahoo.com/search/big5?p=", "&y=b",
+	        "http://gais.cs.ccu.edu.tw/", "蓋世搜尋Gais", true, "http://gais.cs.ccu.edu.tw/cgi-bin/Gais/webgais2.exe?query=", "",
+		//"http://www.octor.com/", "八爪魚", false, "http://www.octor.com/cgi-bin/webgais2.exe?Function=Search&query=", "&domain=all",
+		"http://taiwan.csie.ntu.edu.tw/b5/yam", "番藷籐", false, "http://search.yam.org.tw/b5/search/?k=", "",
+		//"http://phecda.com.tw/", "怪獸", false, "http://phecda.com.tw/s/search?key=", "",
+		//"http://www.whatsite.com.tw/", "哇塞中文網", false, "http://www.whatsite.com.tw/main/search.cgi?keyword=", "&start=0&REXP=OR",
+		"http://www.coo.com.tw/", "Coo娛樂", false, "http://search.coo.com.tw/index.phtml?keyword=", "&show_page=1&category=All",
+		//"http://www.seed.net.tw/comsite-bin/ranlogo?head=Srch.h&tail=Srch.t", "SeedNet", false, "http://www.seed.net.tw/comsite-bin/srch0?Phrase=", "",
+		//"http://db2serv.cc.nctu.edu.tw/tree/", "聚寶盆", false, "http://db2serv.cc.nctu.edu.tw/cgi-bin/search.cgi?KEYS=", "&RELATION=o&SUB=s",
+		//"http://www.hello.com.tw/", "HELLO", false, "http://www.hello.com.tw/cgi-bin/hello.cgi?n=", "",
+		//"http://www.cads.com.tw/cgi-win/search.exe", "羅賓搜索引擎", false, "spc", "http://www.cads.com.tw/cgi-win/cadsear.exe",
+		"http://search.kimo.com.tw/", "奇摩", false, "http://search.kimo.com.tw/cgi-bin/srchfz.pl?query=", "",
+		"http://www.ifound.net.tw/", "發現者", false, "http://www.ifound.com.tw/cgi-bin/search.tmp?Time=10&country=Taiwan&box=", "",
+		"http://search.hksrch.com.hk/", "95港添達", false, "http://search.hksrch.com.hk/cgi-bin/hksrch/hk/search.cgi?searchtext=", "&cva=hk",
+		"http://ipoinc.com.hk/", "95港世頁", false, "http://ipoinc.com.hk/ipo-cgi/iposearchdir?web=sites&db=ALL&max=100&vers=15239&terms=", "&code=0&trans=1&theColls=",
+		"http://www.netvigator.com/", "網上行", false, "http://imssr006.netvigator.com/ipo-cgi/iposearch?terms=", "&code=1&trans=1&theColls=&vers=15239&web=sites&db=ALL&x=23&y=10",
+		"http://www.goyoyo.com.hk/", "95港悠遊", false, "http://www.goyoyo.com.hk/gyy/search%20BIG5?query=", "",
+		"http://www.hkonly.com/", "95港安利", false, "http://www.hkonly.com/cgi-bin/search/search.pl?query=", "&db=Caltavista", 
+		"http://search.abc123.com.tw", "超人氣", false, "http://search.abc123.com.tw/search/?text_search=1&go=", "",
+		"http://yayawoo.com/", "也也烏", false, "http://yayawoo.com/cgi-bin/search/search.cgi?db=chinese&query=", "",
+		"http://search.hyweb.com.tw/", "恐龍引擎", false, "http://search.hyweb.com.tw/cgi-bin/psearch?k=", "",
+		"http://www.onweb.com.tw/", "上華揚", false, "http://search.onweb.com.tw/search1/search.asp?op=or&r1=v1&content=", "",
+		"http://www.sunup.net/", "日升", false, "http://www.sunup.net/search.cgi?1&Keywords=", "",
+		"http://ep.sunup.net/index.cgi", "綠界", false, "http://ep.sunup.net/search.pl?Keywords=", "",
+		"http://www.formosa.com.tw/", "福爾摩莎", false, "http://www.formosa.com.tw/addlinks/ser.asp?txt_name=", "",
+		"http://bbs.openfind.com.tw/", "中文BBS討論區", false, "http://bbs.openfind.com.tw/cgi-bin/qsearch?QUERY=", "",
+
+		"", "英文搜索站點", false, "", "",
+		"http://www.yahoo.com/", "Yahoo!",true, "http://search.yahoo.com/bin/search?p=", "",
+		"http://www.google.com/", "Google", true, "http://www.google.com/search?q=", "",
+		"http://www.altavista.digital.com/", "AltaVista", false, "http://www.altavista.digital.com/cgi-bin/query?pg=q&what=web&fmt=.&q=", "",
+		"http://guide.infoseek.com/", "InfoSeek", false, "http://guide.infoseek.com/Titles?qt=", "&col=WW&sv=IS&lk=ip-noframes&nh=10",
+		"http://webcrawler.com/", "WebCrawler", false, "http://webcrawler.com/cgi-bin/WebQuery?mode=compact&maxHits=25&searchText=", "",
+		"http://www.lycos.com/", "Lycos", false, "http://www.lycos.com/cgi-bin/pursuit?cat=dir&query=", "&maxhits=10",
+		"http://www.netscape.com", "Netscape", false, "http://search.netscape.com/cgi-bin/search?search=", "",
+		"http://www.msn.com/", "MSN", false, "http://search.msn.com/results.asp?co=20&RS=CHECKED&FORM=SMCB&ba=0&v=1&q=", "",
+		"http://www.asiannet.com/search", "AsianNet", false, "http://www.asiannet.com/cgi-bin/vita_seek.pl?KEYWORDS=", "&CONTEXT=Search+All",
+		"http://www.excite.com/", "Excite", false, "http://www.excite.com/search.gw?c=web&search=", "&trace=a",
+		"http://www.einet.net/galaxy.html", "Galaxy", false, "spc", "http://www.einet.net/cgi-bin/wais-text-multi",
+		"http://www.dejanews.com/home_ps.shtml", "Deja News", false, "http://x9.dejanews.com/dnquery.xp?QRY=", "&ST=PS&DBS=2&defaultOp=AND&svcclass=dncurrent&maxhits=25&format=terse&showsort=score",
+		"http://www.hotbot.com/index.html", "HotBot", false, "http://www.hotbot.com/?SW=web&SM=MC&MT=", "&DC=10&DE=2&RG=NA&_v=2",
+		"http://guaraldi.cs.colostate.edu:2000/form", "SavvySearch", false, "http://williams.cs.colostate.edu:1969/search?KW=", "&Boolean=AND&Hits=10&Mode=MakePlan&df=normal&AutoStep=on",
+		"http://www.metacrawler.com/", "go2NET", false, "http://www.metacrawler.com/crawler?general=", "&method=0",
+		"http://www.mckinley.com/", "Magellan!", false, "http://www.mckinley.com/search.gw?search=", "&c=web&look=magellan",
+		"http://www.nosc.mil/planet_earth/info.html", "PlanetEarth", false, "http://www.nosc.mil/cgi-bin/wwwwais?keywords=", "&useicons=no",
+		"http://www.searchchina.com/", "Search China", false, "http://www.searchchina.com/search.php3?logic=advanced&limit=10&country=ch&search=", "",
+
+		"", "簡體中文搜索站點", false, "", "",
+		"http://cn.yahoo.com", "中文Yahoo", true, "http://cn.search.yahoo.com/search/cn?p=", "&u=g&y=y",
+		"http://www.163.com/","網易搜索",false,"http://search.163.com/cgi-bin/search/engine/search.fcgi?key=","",
+		"http://www.sohu.com/","搜狐", true, "http://site.search.sohu.com/sitesearch.jsp?key_word=","&page_index=0",
+		"http://search.sina.com.cn/","新浪搜索", true, "http://search.sina.com.cn/cgi-bin/search/search.cgi?ss=sina&_searchkey=","&_andor=and",
+		"http://search.fm365.com/", "FM365", false, "http://search.fm365.com/cgi-bin/search/search.cgi?query=", "&ty365=web",
+		"http://www.goyoyo.com.cn", "悠遊", false, "http://www.goyoyo.com.cn/gyy/search%20GB?query=", "",
+		"http://www.google.com/", "中文Google", true, "http://www.google.com/search?q=", "&hl=zh-CN&lr=lang_zh-CN",
+		"http://www.tonghua.com.cn", "常青籐", false, "http://search.tonghua.com.cn/search?p=", "",
+		"http://www.dreamer.com.cn/", "夢想家", false, "http://engine.dreamer.com.cn/?kword=", "&type=2",
+		"http://www.cseek.com/", "搜索客", false, "http://www.cseek.com/cgi/srchengine.cgi?searchkey=", "&all=yes&sortby=1",
+		"http://www.beijixing.com.cn", "北極星", false, "http://www.beijixing.com.cn/polaris/search.asp?condition=", "",
+		"http://www.263.com/", "263", false, "http://search263.net/php/url/sekeys_263.dll?keys=", "",
+		"http://search.cis.com.cn/", "網典", false, "http://wander.cis.com.cn/look_search.asp?word=", "&D1=2&cdtype=GB&dc=all&display=Standard&fno=0&method=Fuzzy&operation=And&resulthtx=cgi-bin%2Fweb_result.htx&x=10&y=13",
+		"http://www.focus.com.cn/", "焦點", false, "http://search.focus.com.cn/search/search_engine_website.ecgi?search_again_mark=1&search_class=1&p=", "&url_reg=1&lang_sel=0&code=&page=",
+		"http://www.linefan.com/", "航帆搜索", false, "http://www.linefan.com/php/selectlinefan.php3?Query=", "&sarea=web&B123.x=27&B123.y=3", 
+		"http://search.chinaren.com/", "孫悟空", false, "http://search.chinaren.com/baidu?tn=chinaren&si=gi&word=", "&ct=0&cl=2&lm=0",
+		"http://e.pku.edu.cn/", "北大搜索", false, "http://e.pku.edu.cn/cgi-bin/allsearch?word=", "",
+		"http://search.zhaodaola.com", "找到啦!", false, "http://search.zhaodaola.com/cgi-bin/search.exe?searchkey=","&cata=所有網站&radio1=1&R1=V4",
+		"http://www.sobao.com/", "搜豹", false, "http://www.sobao.com/searchchoice.php?word=", "&type=internet",
+		"http://cn.i-panda.com/index.cgi", "熊貓網", false, "http://cn.i-panda.com/index.cgi?img=0&search=", "&cat=all&bool=and",
+		"http://www.widewaysearch.com/index.html", "萬緯搜索", false, "http://www.widewaysearch.com/servlet/SearchEngine1?query=", "&num=20&sa=   一般查找   ",
+		"http://www.howhunt.com/", "浩瀚", false, "http://www.howhunt.com/script/search.phtml?searchkey=", "&flagfirst=%BC%EC%CB%F7&area=&host=",
+		"http://cn.lycosasia.com/", "Lycos中國", false, "http://cn.lycosasia.com/cgi-bin/pursuit?query=", "&cat=cnscdir",
+		"http://search163.net/", "163搜索", false, "http://www.linefan.com/php/select1.php3?Query=", "&sarea=web&B123.x=3&B123.y=5",
+		"http://www.robot.com.cn/", "若比鄰", false, "http://www.robot.com.cn/cgi-bin/domainquery3.cgi?word=", "&choose=1",
+		"http://www.altavista.com", "中文Altavista", false, "http://www.altavista.com/cgi-bin/query?pg=q&kl=zh&q=", "",
+		"http://chinese.excite.com", "中文Excite", false, "http://chinese.excite.com/search/search.dcg?collection=china&look=default&search=", "",
+
+		"", "中文軟件搜索", false, "", "",
+		"http://www.mydown.com/", "電腦報", false, "http://www.mydown.com/cgi-bin/Search/search.cgi?query=","",
+		"http://www.joyo.com/", "金山卓越", false, "http://www.joyo.com/soft/dlsearch.asp?uid=38015559209028015055033&id=", "",
+		"http://www.download.com.cn/", "中國下載", false, "http://www.download.com.cn/show.phtml?action=search&sk=", "",
+		"http://www.dreamer.com.cn/", "夢想家", false,  "http://engine.dreamer.com.cn/index.cgi?kword=", "&type=10",
+		"http://www.newhua.com/", "華軍軟件園", false, "http://www.picosearch.com/cgi-bin/ts.pl?index=52385&query=", "",
+		"http://zhangjia.yeah.net/", "張迦歡樂天地", false, "http://www.picosearch.com/cgi-bin/ts.pl?index=22208&query=", "",
+		"http://asp.cnshare.com/", "中國共享", false, "http://asp.cnshare.com/coco/cnshare/searchsoft.asp?keywords=", "",
+		"http://software.tiandown.com/", "天下網", false, "http://software.tiandown.com/search.asp?search=", "",
+		"http://www.computerinfo.com.cn/", "齊魯熱線", false, "http://www.computerinfo.com.cn/computer/softqueryall.asp?rjmc=", "&submit=",
+		"http://soft.zz.ha.cn/", "軟件任我行", false, "http://soft.zz.ha.cn/query/query.asp?kword=", "",
+
+
+		"", "英文軟件搜索", false, "", "",
+		"http://www.zdnet.com/", "ZDNet", false, "http://xlink.zdnet.com/cgi-bin/texis/xlink/xlink/search.html?Utext=", "",
+		"http://www.filez.com/", "FileZ", false, "http://filez.com/cgi/filez.cgi?query=", "&doit=Search&unique=1&filetype=&domain=&archive=amug.org&company=apple.com&hits=100",
+		"http://www.download.com/", "Download.com", false, "http://www.download.com/pc/list/1,339,0-a-0-0-e-1,00.html?tag=st.dl..srch.list&search=", "&queryType=quicksearch",
+		"http://www.tucows.com/", "Tucows", false, "http://www.tucows.com/perl/tucowsSearch?word=", "&key=all&do=search&platform=win95",
+		"http://www.softfind.com/", "SoftFind", false, "http://www.softfind.com/SF_Search?Type=KeyWord&StartAfter=&maxHits=10&AndOr=all&SearchText=", "",
+		"http://winfiles.cnet.com/", "WinFiles", false, "http://winfiles.cnet.com/cgi-bin/search.cgi?words=", "&scope=Search+ALL+Windows+Software",
+		"http://www.jumbo.com/", "Jumbo", false, "http://www.jumbo.com/includes/ngads.asp.htp?page_url=/search/", "",
+		"http://192.41.20.42/", "SoftSeek", false, "http://192.41.20.42/cgi-bin/search.cgi?keywords=", "&seekindex=index&maxresults=025&cb=",
+		"http://shareware.cnet.com/", "Shareware", false, "http://shareware.cnet.com/shareware/1,10269,0-16125-501-0-1-3,00.html?qt=", "&ca=16125",
+		"http://www.filemine.com/", "FileMine", false, "http://www.filemine.com/searchResults?Action=FilterSearch&Filter=fmfilter.hts&ResultTemplate=fmresults.hts&ViewTemplate=view.hts&baseref=1&queryText=", "&platformid=0&submitbutton=Search",
+		
+	
+		"", "MP3搜索", false, "", "",
+		"http://ev.yesite.com/", "夢想家", false, "http://ev.yesite.com/database/search/receive_search.asp?search_string=", "&select=貉⑻脤戙&page=1",
+		"http://mp3.stn.sh.cn/mp3/", "MP3之家", false, "http://mp3.stn.sh.cn/Mp3/Mp3Music/Mp3_Search.asp?trsSearchType=0&trsSearchStr=", "",
+		"http://geci.yesite.com/", "歌詞理想國", false, "http://geci.yesite.com/cgi-bin/songs/search.cgi?query=", "",
+		"http://search.zhaodaola.com", "找到啦!", false, "http://search.zhaodaola.com/cgi-bin/search.exe?searchkey=","&cata=所有網站&radio1=1&R1=V5",
+		"http://www.100mp3.com/", "100MP3", false, "http://www.100mp3.com/mp3search.cgi?action=search&Keywords=", "",
+	
+		"", "英文MP3搜索", false, "", "",
+		"http://www.mp3box.com/", "MP3Box", false, "http://mp3.box.sk/mp3ftp.php3?srch=", "&submit=+search+",
+		"http://www.mp3.com/", "MP3.com", false, "http://search.mp3.com/bin/search?query=", "&display=default",
+		"http://www.seekmp3.com/", "SeekMP3", false, "http://www.seekmp3.com/http_search/search.php3?type=search&search=", "",
+		"http://www.acidsearch.com/", "Acid", false, "http://www.acidsearch.com/cgi-bin/search/socketer.pl?query=", "",
+		"http://mp3search.astraweb.com/", "Astraweb", false, "http://mp3search.astraweb.com/cgi-bin/search.cgi?word=", "&submit=%B2%E9%D5%D2",
+		"http://music.lycos.com/", "Lycose Music", false, "http://music.lycos.com/default.asp?form=lycosnet&QT=S&QW=", "&doit=%B2%E9%D5%D2",
+
+
+		"", "新聞搜索", false, "", "",
+		"http://www.sina.com.cn/", "新浪新聞", false, "http://search.sina.com.cn/cgi-bin/news/searchnews.cgi?sk=", "",
+		"http://www.nease.net/", "網易新聞", false, "http://search.163.com/search/results/1,1602,0,00.html&category=&type=0&key=", "^",
+		"http://news1.gznet.com/", "廣州視窗", false, "http://news1.gznet.com/search_engine.asp?keywords=", "&pg=0&newstype=",
+		"http://www.dreamer.com.cn/", "夢想家新聞", false, "http://engine.dreamer.com.cn/?kword=", "&type=4",
+		"http://www.sohu.com/", "搜狐新聞", false, "http://search.sohu.com/cgi-bin/search_news.cgi?txt_keyword=", "&page_index=0&catagory=news&B1=%D0%C2%CE%C5%CB%D1%CB%F7",
+
+
+		"", "英文新聞搜索", false, "", "",
+		"http://news.search.com", "News.com", false, "http://news.search.com/search?q=", "",
+		"http://search.news.yahoo.com/", "Yahoo News", false, "http://search.news.yahoo.com/search/news?p=", "&n=10&c=news",
+		"http://search.abc.go.com/", "ABC", false, "http://search.abc.go.com/abctv/query.html?rf=0&nh=10&qm=0&rq=0&qt=", "&x=4&y=5",
+		"http://www.usatoday.com/", "USA Today", false, "http://www.lycos.com/cgi-bin/pursuit?matchmode=and&cat=usatoday&query=", "",
+		"http://www.lycos.com/", "Lycos News", false, "http://www.lycos.com/srch/more.html?type=news&recalc=Y&first=1&page=1&loc=fromnews&query=", "&lpv=1",
+
+		"", "股票行情", false, "", "",
+		"http://www.stockstar.com/", "實時行情", false, "http://quote01.stockstar.com/simplequote?code=", "",
+		"http://www.stockstar.com/", "實時曲線", false, "http://chartr1.stockstar.com/rtline?code=", "&now",
+		"http://www.stockstar.com/", "日K曲線", false, "http://chartd1.stockstar.com/dkline?code=", "&now",
+
+		"", "驅動搜索", false, "", "",
+		"http://www.mydrivers.com/", "Mydrivers.com", false, "http://www.mydrivers.com/scripts/search.dll?item=", "",
+
+
+		"", "技術類搜索", false, "", "",
+		"http://www.byte.com/", "Byte", false, "http://www.byte.com/search?queryText=", "&SEARCH-97=Search",
+		"http://search.hotwired.com/", "Wired", false, "http://search.hotwired.com/search97/s97.vts?Action=FilterSearch&Filter=docs_filter.hts&ResultTemplate=news.hts&Collection=news&QueryMode=Internet&Query=", "",
+		"http://www-tech.mit.edu/", "Tech.mit", false, "http://www-tech.mit.edu/cgi-bin/htsearch?restrict=%2FV105%2F&restrict=%2FV109%2F&restrict=%2FV110%2F&restrict=%2FV111%2F&restrict=%2FV112%2F&restrict=%2FV113%2F&restrict=%2FV114%2F&restrict=%2FV115%2F&restrict=%2FV116%2F&restrict=%2FV117%2F&restrict=%2FV118%2F&restrict=%2FV119%2F&method=and&format=builtin-long&config=htdig&exclude=&words=", "",
+		"http://search.microsoft.com/", "MSDN", false, "http://search.microsoft.com/us/dev/default.asp?qu=", "&boolean=ALL&nq=NEW&so=RECCNT&p=1&chkM=on&radM=2&chkS=on&radS=2&chkA=on&radA=2&chkP=on&radP=2&chkK=on",
+		"http://itsearch.ccidnet.com/", "賽迪搜索", false, "http://itsearch.ccidnet.com/cgi-bin/engine/search?Stext=", "&Surlw=0",
+
+		"", "", false, "", ""
+	);
+    function trim(string)
+	{var str2="";
+	 for(var i=0;i<string.length;i++)
+	   if(string.charAt(i)!=" ")
+	     str2+=string.charAt(i);
+	  return str2;
+	 }
+	
+	function Search()
+	{if (trim(document.searchtable.keyword.value)=="")
+	   return;
+	 savesearch();
+	 for (var i=0; i<se.length; i++)
+	  if (se[i].checked && se[i].p1 != "")
+	  {if (se[i].p1 != "spc")
+	      window.open(se[i].p1 + document.searchtable.keyword.value + se[i].p2 , 'w'+i);
+    	   else
+	     {with (document)
+		{searchbox.action = se[i].p2;
+		 searchbox.keywordc.value = searchtable.keyword.value;
+		 searchbox.keywords.value = searchtable.keyword.value;
+		 searchbox.query.value = searchtable.keyword.value;
+		 searchbox.SearchFor.value = searchtable.keyword.value;
+		 searchbox.search.value = searchtable.keyword.value;
+		 searchbox.terms.value = searchtable.keyword.value;
+		 searchbox.target = 'w'+i;				
+		 searchbox.submit();				
+		}
+	   }
+	  }
+	  //document.searchtable.keyword.value=""; 
+	}
+
+
+</script>
+
+<!--hide search engines-->
+<script language="JavaScript">
+
+NS4 = (document.layers) ? 1 : 0;
+IE4 = (document.all) ? 1 : 0;
+ver4 = (NS4 || IE4) ? 1 : 0;
+if (ver4) {
+  with (document) {
+      write("<STYLE TYPE='text/css'>");
+      if (NS4) {
+          write(".parent {position:absolute; visibility:visible}");
+          write(".child {position:absolute; visibility:visible}");
+          write(".regular {position:absolute; visibility:visible}")
+      }
+      else {
+          write(".child {display:none}")
+      }
+      write("</STYLE>");
+  }
+}
+
+//======================
+
+function getIndex(el) {
+  ind = null;
+  for (i=0; i<document.layers.length; i++) {
+      whichEl = document.layers[i];
+      if (whichEl.id == el) {
+          ind = i;
+          break;
+      }
+  }
+  return ind;
+}
+function arrange() {
+  nextY = document.layers[firstInd].pageY +document.layers[firstInd].document.height;
+  for (i=firstInd+1; i<document.layers.length; i++) {
+      whichEl = document.layers[i];
+      if (whichEl.visibility != "hide") {
+          whichEl.pageY = nextY;
+          nextY += whichEl.document.height;
+      }
+  }
+}
+function initIt(){
+  if (!ver4) return;
+  if (NS4) {
+      for (i=0; i<document.layers.length; i++) {
+          whichEl = document.layers[i];
+          if (whichEl.id.indexOf("Child") != -1) whichEl.visibility = "hide";
+     }
+      arrange();
+  }
+  else {
+      divColl = document.all.tags("DIV");
+      for (i=0; i<divColl.length; i++) {
+          whichEl = divColl(i);
+          if (whichEl.className == "child") whichEl.style.display = "none";
+      }
+  }
+}
+function expandIt(el) {
+  if (!ver4) return;
+  if (IE4) {
+      whichEl = eval(el + "Child");
+      if (whichEl.style.display != "block") {
+          whichEl.style.display = "block";
+      }
+      else {
+          whichEl.style.display = "none";
+      }
+  }
+  else {
+      whichEl = eval("document." + el + "Child");
+      if (whichEl.visibility == "hide") {
+          whichEl.visibility = "show";
+      }
+      else {
+          whichEl.visibility = "hide";
+      }
+      arrange();
+  }
+}
+
+function moues_txt(txt)
+{
+  window.status=txt;
+}
+
+var sellist = new Array();
+
+function checkall()
+{
+	for(i=0; i<sellist.length; i++)
+		if(sellist[i])
+			eval('document.searchtable.selall'+i+'.checked=true');
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+.d1 	{font-family: "宋體";font-size: 9pt; cursor:hand; width:105}
+.d 	{font-family: "宋體";font-size: 9pt; background: #3C6EA4;color: #FFFFFF}
+td.d2 	{font-family: "宋體";font-size: 9pt; background: #ffffff;color: #000000; width:110}
+a 	{font-family: "宋體";text-decoration: none; font-size: 9pt; color: #000000; cursor: hand; }
+a:hover	{font-family: "宋體";color: #FF0000; text-decoration: underline; font-size: 9pt; cursor: hand}
+input.i1{font-size: 9pt;}
+-->
+</style>
+</head>
+
+<body link="#303030" alink=#00a0e9 onunload="savesearch()" onload="checkall()">
+
+<center>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr><td>
+<center>
+<form name="searchtable" onSubmit="Search(); return false;">
+<center><input type="text" name="keyword" style="width: 150; background-color: #FAFCEF; border: 1 solid #20663B"><Br>
+<input type="submit" value="查詢" style="background-color: #bfbfe2;">
+<input type="reset" value="重新輸入" style="background-color: #bfbfe2;">
+</center>
+<table border=0 cellpadding="0" cellspacing="0" cols="2" width="100%" >
+<TR><TD COLSPAN="2" class="d1"><div></td>
+<script language="javascript">
+                                                                                         
+with (document)
+	{var tb=0, total=0, selected=0, cates=0, selalllist='';
+ 	 for (var i=0; i<se.length; i++)
+	  {if (se[i].url == ''&& se[i].name!='')
+	   {if (tb > 0)
+	   	write('</TR>');
+		write('</table></div><div align=left class="d"><span onClick="expandIt(\'category'+cates+'\')" class="d1">' + se[i].name + '</span>  <input TYPE="CHECKBOX" name="selall'+cates+'" onClick="onselall('+i+', document.searchtable.selall'+cates+'.checked' +')">全選</div>');
+		write('<div align=left id="category'+cates+'Child" class="child"><table border=0 cellpadding="0" cellspacing="0">')
+ 	        if(selected > 0 && total!=selected)
+		  expandIt('category'+(cates-1));
+		if(total == selected && cates>0)
+		  {
+			sellist[cates-1]=1;  
+		  }
+		else
+			sellist[cates-1]=0;
+		tb = 0;
+		total = 0;
+		selected = 0;
+		cates++;
+	    }
+	    else if (se[i].name!='')
+	    {
+	     tb++;
+	     if (tb==1)
+	     write('<TR>\n');
+	     write('<TD NOWRAP class="d2"><INPUT TYPE="CHECKBOX" ' + (se[i].checked?' CHECKED':'') + ' NAME="w' + i + '" onClick="se[' + i + '].checked = document.searchtable.w'+i+'.checked">' + 
+	     '<A HREF="' + se[i].url + '" TARGET="w' + i + '">' + se[i].name + '</A></TD>');
+	     if (tb > 1)
+		{
+		 write('</TR>\n');
+		 tb = 0;
+		}
+	     if(se[i].checked)
+		selected++
+	     total++;
+	     }
+	  }
+	}
+
+        if(selected > 0)
+	  expandIt('category'+(cates-1));
+	if(total == selected && cates>0)
+		sellist[cates-1]=1;  
+	else
+		sellist[cates-1]=0;
+
+	if (top.NS)
+	 {document.searchbox.reset();
+          document.searchtable.reset();
+         }
+
+	/*selalllist = selalllist.split(';');
+	for(i=0; i<selalllist.length-1; i++)
+		eval('document.searchtable.selall'+selalllist[i]+'.checked=true');*/
+
+</script>
+</table>
+</center>
+</form>
+
+</tr></td>
+</table>
+
+<form name="searchbox" method=post >
+
+<input type="hidden" name="maxhits" value="25">
+<input type="hidden" name="format" value="terse">
+<input type="hidden" name="threaded" value="0">
+<input type="hidden" name="showsort" value="score">
+<input type="hidden" name="agesign" value="1">
+<input type="hidden" name="ageweight" value="1">
+<input type="hidden" name="head" value="noframes">
+<input type="hidden" name="tail" value="noframes">
+<input type="hidden" name="mode" value="phrase">
+<input type="hidden" name="bool" value="allterms">
+<input type="hidden" name="websearch" value="checked">
+<input type="hidden" name="area" value="webtext">
+<input type="hidden" name="defaultop" value="and">
+<input type="hidden" name="svcclass" value="dncurrent">
+<input type="hidden" name="searnum" value="0">
+<input type="hidden" name="searadd" value="searchgo">
+<input type="hidden" name="keywordc">
+<input type="hidden" name="keywords">
+<input type="hidden" name="query">
+<input type="hidden" name="terms">
+<input type="hidden" name="SearchFor">
+<input type="hidden" name="search">
+
+</form>
+
+
+</body>
+</html>

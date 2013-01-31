@@ -1,0 +1,137 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+   <TITLE>Link List</TITLE>
+   <Style type=text/css>
+    body {BACKGROUND-COLOR: #ffffff;  
+		MARGIN-top: 0px;
+		MARGIN-left: 0px;	  
+}
+	  
+   </Style>	
+<SCRIPT language="JavaScript">
+function ALink(name, url)
+{this.name = name;
+ this.url = url;
+}
+
+function LinkArray() 
+{with(LinkArray)
+ {this.length = arguments.length / 2;
+  var j = 0;
+  for (var i = 0; i < this.length; i++) 
+   {this[i] = new ALink(arguments[j], arguments[j+1]);
+    j += 2;
+   }
+ }
+}
+
+function MailtoArray() 
+{with(MailtoArray)
+ {this.length = arguments.length / 2;
+  var j = 0;
+  for (var i = 0; i < this.length; i++) 
+   {this[i] = new ALink(arguments[j], arguments[j+1]);
+    j += 2;
+   }
+ }
+}
+
+<!--LINK LIST HERE-->
+
+</script>
+
+<style type="text/css">
+<!--
+td 	{  font-size: 9pt}
+.d 	{font-size: 9pt; background: #E0E0E0;color: #003333}
+.d0	{font-size: 9pt;background-color: #FAFCEF; border: 1 solid #20663B}
+.d1 	{font-size: 9pt;cursor: hand; color: #000000;background: #eeeeee; height: 20px; padding-top: 4px}
+.d3	{font-size: 9pt;background-color: #FAFCEF; border: 2 solid #20663B}
+td.d2 	{font-size: 9pt; background: #ffffff;color: #000000}
+a 	{text-decoration: none; font-size: 9pt; color: #000080; cursor: hand; }
+a:hover	{color: #FF0000; text-decoration: underline; font-size: 9pt; cursor: hand}
+.child {display:none}
+-->
+</style>
+</head>
+
+<body>
+
+<font size=-1>過濾：<select name=filter onChange='javascript:displaylinks(this.options[this.selectedIndex].value)'>
+<option value=''>----------------------</option>
+<option value='.htm'>.htm;.html</option>
+<option value='.shtm'>.shtm</option>
+<option value='.exe'>.exe</option>
+<option value='.zip'>.zip</option>
+<option value='.mp3'>.mp3</option>
+<option value='.txt'>.txt</option>
+<option value='.doc'>.doc</option>
+<option value='.arj'>.arj</option>
+<option value='.bin'>.bin</option>
+<option value='.asp'>.asp</option>
+<option value='.php'>.php</option>
+<option value='mailto:'>mailto:</option>
+<option value='http:'>http:</option>
+<option value='https:'>https:</option>
+<option value='ftp:'>ftp:</option>
+<option value='file:'>file:</option>
+<option value='javascript:'>javascript:</option>
+</select>
+</font>
+
+
+<div id=linklist></div>
+
+<script language="javascript">
+
+function displaylinks(filter)
+{var str="";
+with(linklist)
+{
+	innerHTML = "";
+	str += "<table border=0><tr><td class=d>&nbsp;</td><td class=d  width=40%>鏈接</td><td class=d  width=58%>URL</td></tr>";
+
+ 	 for (var i=0; i<urllinks.length; i++)
+	  {
+		if(filter=="" || urllinks[i].url.indexOf(filter)>=0)
+		{
+		str += "<tr><td>";
+		str += (i+1);
+		str += ".</td><td>";
+		str += "<a href="+urllinks[i].url+ " title="+urllinks[i].url+" target=new>"+urllinks[i].name+"</a>";
+		str += "</td><td>";
+		str += urllinks[i].url;
+		str += "</td></tr>";
+		}
+	  }
+	str += "</table>";
+	insertAdjacentHTML("beforeEnd", str);
+
+
+	str = "<table border=0><tr><td class=d>&nbsp;</td><td class=d  width=200>Name</td><td class=d width=300>Email</td></tr>";
+ 	 for (var i=0; i<mailtos.length; i++)
+	 {
+		str += "<tr><td>";
+		str += (i+1);
+		str += ".</td><td>";
+		str += "<a href="+mailtos[i].url+ " title="+mailtos[i].url+" target=new>"+mailtos[i].name+"</a>";
+		str += "</td><td>";
+		var tmp = mailtos[i].url;
+		tmp = tmp.substring(7,tmp.length)
+		str += tmp;
+		str += "</td></tr>";
+	  }
+	str += "</table>";
+	insertAdjacentHTML("beforeEnd", str);
+
+}
+}
+
+
+displaylinks("");
+
+</script>
+
+</body>
+</html>
